@@ -1,0 +1,25 @@
+Arthur est le premier à se joindre à la dernière bataille entre les Hommes et les
+dragons.
+Thomas : Bonjour, je m'appelle Thomas et je viens me joindre au combat.
+Le dragon Dragonet fut le premier à arriver sur le champ de bataille.
+Thomas : Je prends mon arc.
+Thomas attaque Dragonet avec son arc.
+Dragonet subit une violente attaque, mais il parvient à se relever.
+Le héros Arthur : je prends excalibur
+Arthur attaque Dragonet avec son épée.
+Dragonet subit une violente attaque, mais il parvient à se relever.
+Dragonet crache une boule de feu sur Arthur
+Arthur subit une violente attaque, mais il parvient à se relever.
+Thomas a lâché son arc.
+Thomas : Arthur peux-tu me laisser ton épée ?
+Le héros Arthur : pas de souci, cela me permettra de reprendre mon souffle.
+Arthur a lâché son épée.
+Thomas : Je prends l’épée même si pour cela je dois perdre des forces.
+Thomas attaque Dragonet avec son épée.
+Dragonet subit une violente attaque, mais il parvient à se relever.
+Le héros Arthur : Je prends mon arc.
+Arthur attaque Dragonet avec son arc.
+Dragonet subit une violente attaque, trop violente pour survivre.
+C’est ainsi que le dragon Dragonet mourut.
+Les Hommes ont conquis la lande, leurs villages n'auront plus jamais à trembler
+devant les dragons.
