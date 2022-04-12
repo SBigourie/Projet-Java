@@ -1,7 +1,7 @@
 package equipements.armes;
 
-import protagonistes.monstre.Dragon;
 import protagonistes.humain.Humain;
+import protagonistes.monstre.Monstre;
 
 public class Arme {
     protected Humain proprietaire;
@@ -32,8 +32,8 @@ public class Arme {
     public void lacher () {
         this.proprietaire = null;
     }
-    public String attaque (Dragon dragon) {
-        return proprietaire.getNom() + " attaque " + dragon.getNom() + " avec son " + getNature() + "\n"
-                +dragon.subirAttaque(dragon,degat);
+    public String attaque (Monstre monstre) {
+        return proprietaire.getNom() + " attaque " + monstre.getNom() + " avec son " + getNature() + "\n"
+                +monstre.subirAttaque(monstre,degat);
     }
 }
