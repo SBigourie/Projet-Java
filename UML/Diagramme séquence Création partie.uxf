@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>11</zoom_level>
+  <zoom_level>9</zoom_level>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>330</x>
-      <y>77</y>
-      <w>110</w>
-      <h>33</h>
+      <x>342</x>
+      <y>63</y>
+      <w>90</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>_Interface_
 bg=red</panel_attributes>
@@ -16,10 +16,10 @@ bg=red</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>374</x>
-      <y>165</y>
-      <w>22</w>
-      <h>77</h>
+      <x>378</x>
+      <y>135</y>
+      <w>18</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>
 bg=red</panel_attributes>
@@ -28,10 +28,10 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>374</x>
-      <y>231</y>
-      <w>33</w>
-      <h>55</h>
+      <x>378</x>
+      <y>189</y>
+      <w>27</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
@@ -39,10 +39,10 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>55</x>
-      <y>99</y>
-      <w>33</w>
-      <h>88</h>
+      <x>117</x>
+      <y>81</y>
+      <w>27</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -50,10 +50,10 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>374</x>
-      <y>99</y>
-      <w>33</w>
-      <h>88</h>
+      <x>378</x>
+      <y>81</y>
+      <w>27</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -61,10 +61,10 @@ bg=red</panel_attributes>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>33</x>
+      <x>99</x>
       <y>0</y>
-      <w>66</w>
-      <h>121</h>
+      <w>54</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>Users</panel_attributes>
     <additional_attributes/>
@@ -72,10 +72,10 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>605</x>
-      <y>99</y>
-      <w>33</w>
-      <h>143</h>
+      <x>567</x>
+      <y>81</y>
+      <w>27</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
@@ -83,10 +83,10 @@ bg=red</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>561</x>
-      <y>77</y>
-      <w>110</w>
-      <h>33</h>
+      <x>531</x>
+      <y>63</y>
+      <w>90</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>_Joueur_
 bg=red</panel_attributes>
@@ -95,21 +95,21 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>605</x>
-      <y>242</y>
-      <w>33</w>
-      <h>605</h>
+      <x>567</x>
+      <y>198</y>
+      <w>27</w>
+      <h>837</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;530.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;910.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>759</x>
-      <y>77</y>
-      <w>110</w>
-      <h>33</h>
+      <x>693</x>
+      <y>63</y>
+      <w>90</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>_StockArmée_
 bg=red</panel_attributes>
@@ -118,10 +118,10 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>803</x>
-      <y>99</y>
-      <w>33</w>
-      <h>187</h>
+      <x>729</x>
+      <y>81</y>
+      <w>27</w>
+      <h>153</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
@@ -129,10 +129,10 @@ bg=red</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1144</x>
-      <y>77</y>
-      <w>132</w>
-      <h>33</h>
+      <x>1008</x>
+      <y>63</y>
+      <w>108</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>_StockEtreVivant_
 bg=red</panel_attributes>
@@ -141,10 +141,10 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1199</x>
-      <y>99</y>
-      <w>33</w>
-      <h>253</h>
+      <x>1053</x>
+      <y>81</y>
+      <w>27</w>
+      <h>207</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;210.0</additional_attributes>
@@ -152,10 +152,10 @@ bg=red</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>55</x>
-      <y>165</y>
-      <w>22</w>
-      <h>759</h>
+      <x>117</x>
+      <y>135</y>
+      <w>18</w>
+      <h>882</h>
     </coordinates>
     <panel_attributes>
 bg=yellow</panel_attributes>
@@ -164,10 +164,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>66</x>
-      <y>154</y>
-      <w>330</w>
-      <h>44</h>
+      <x>126</x>
+      <y>126</y>
+      <w>270</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>Nom du joueur ?
 lt=-&gt;&gt;&gt;</panel_attributes>
@@ -176,10 +176,10 @@ lt=-&gt;&gt;&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>66</x>
-      <y>198</y>
-      <w>330</w>
-      <h>44</h>
+      <x>126</x>
+      <y>162</y>
+      <w>270</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>"Joueur 1"
 lt=-&gt;&gt;&gt;</panel_attributes>
@@ -188,10 +188,10 @@ lt=-&gt;&gt;&gt;</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>605</x>
-      <y>220</y>
-      <w>22</w>
-      <h>33</h>
+      <x>567</x>
+      <y>180</y>
+      <w>18</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>
 bg=red</panel_attributes>
@@ -200,10 +200,10 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>385</x>
-      <y>209</y>
-      <w>242</w>
-      <h>44</h>
+      <x>387</x>
+      <y>171</y>
+      <w>198</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>createJoueur("Joueur 1")
 lt=-&gt;&gt;&gt;</panel_attributes>
@@ -212,10 +212,10 @@ lt=-&gt;&gt;&gt;</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>374</x>
-      <y>264</y>
-      <w>22</w>
-      <h>77</h>
+      <x>378</x>
+      <y>216</y>
+      <w>18</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>
 bg=red</panel_attributes>
@@ -224,10 +224,10 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>66</x>
-      <y>253</y>
-      <w>330</w>
-      <h>44</h>
+      <x>126</x>
+      <y>216</y>
+      <w>270</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>Choix armée ?
 lt=-&gt;&gt;&gt;</panel_attributes>
@@ -236,10 +236,10 @@ lt=-&gt;&gt;&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>66</x>
-      <y>297</y>
-      <w>330</w>
-      <h>44</h>
+      <x>126</x>
+      <y>243</y>
+      <w>270</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>"Armée 1"
 lt=-&gt;&gt;&gt;</panel_attributes>
@@ -248,10 +248,10 @@ lt=-&gt;&gt;&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>385</x>
-      <y>308</y>
-      <w>440</w>
-      <h>44</h>
+      <x>387</x>
+      <y>252</y>
+      <w>360</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>selectionArmee("Armée 1")
 lt=-&gt;&gt;&gt;</panel_attributes>
@@ -260,10 +260,10 @@ lt=-&gt;&gt;&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>374</x>
-      <y>330</y>
-      <w>33</w>
-      <h>341</h>
+      <x>378</x>
+      <y>270</y>
+      <w>27</w>
+      <h>279</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;290.0</additional_attributes>
@@ -271,10 +271,10 @@ lt=-&gt;&gt;&gt;</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>803</x>
-      <y>319</y>
-      <w>22</w>
-      <h>33</h>
+      <x>729</x>
+      <y>261</y>
+      <w>18</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>
 bg=red</panel_attributes>
@@ -283,10 +283,10 @@ bg=red</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>374</x>
-      <y>649</y>
-      <w>22</w>
-      <h>275</h>
+      <x>378</x>
+      <y>531</y>
+      <w>18</w>
+      <h>234</h>
     </coordinates>
     <panel_attributes>
 bg=red</panel_attributes>
@@ -295,21 +295,21 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>803</x>
-      <y>341</y>
-      <w>33</w>
-      <h>506</h>
+      <x>729</x>
+      <y>279</y>
+      <w>27</w>
+      <h>756</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;440.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;820.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>803</x>
-      <y>264</y>
-      <w>22</w>
-      <h>33</h>
+      <x>729</x>
+      <y>216</y>
+      <w>18</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>
 bg=red</panel_attributes>
@@ -318,10 +318,10 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>385</x>
-      <y>253</y>
-      <w>440</w>
-      <h>44</h>
+      <x>387</x>
+      <y>207</y>
+      <w>360</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>afficherArmée()
 lt=-&gt;&gt;&gt;</panel_attributes>
@@ -330,10 +330,10 @@ lt=-&gt;&gt;&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>803</x>
-      <y>286</y>
-      <w>33</w>
-      <h>55</h>
+      <x>729</x>
+      <y>234</y>
+      <w>27</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
@@ -341,34 +341,22 @@ lt=-&gt;&gt;&gt;</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1199</x>
-      <y>330</y>
-      <w>22</w>
-      <h>341</h>
+      <x>1053</x>
+      <y>270</y>
+      <w>18</w>
+      <h>279</h>
     </coordinates>
     <panel_attributes>
 bg=red</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>814</x>
-      <y>319</y>
-      <w>407</w>
-      <h>44</h>
-    </coordinates>
-    <panel_attributes>selectionEtreViavant("Armée 1", typeEtreVivant)
-lt=-&gt;&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>1199</x>
-      <y>275</y>
-      <w>275</w>
-      <h>363</h>
+      <x>1053</x>
+      <y>225</y>
+      <w>225</w>
+      <h>306</h>
     </coordinates>
     <panel_attributes>alt
 --
@@ -388,22 +376,20 @@ if [typeEtreVivant == MONSTRE]
 
 
 
+
 -.
 elseif[typeEtreVivant == MAGE]
 
-
-
--.
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>385</x>
-      <y>638</y>
-      <w>836</w>
-      <h>44</h>
+      <x>387</x>
+      <y>522</y>
+      <w>684</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>afficherPersonnage(typeEtreVivant)
 lt=-&gt;&gt;&gt;</panel_attributes>
@@ -412,10 +398,10 @@ lt=-&gt;&gt;&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>66</x>
-      <y>759</y>
-      <w>330</w>
-      <h>44</h>
+      <x>126</x>
+      <y>585</y>
+      <w>270</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>Choix personnage ?
 lt=-&gt;&gt;&gt;</panel_attributes>
@@ -424,22 +410,22 @@ lt=-&gt;&gt;&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>66</x>
-      <y>792</y>
-      <w>330</w>
-      <h>44</h>
+      <x>126</x>
+      <y>612</y>
+      <w>270</w>
+      <h>36</h>
     </coordinates>
-    <panel_attributes>"Chevalier"
+    <panel_attributes>entrerClavier(perso)
 lt=-&gt;&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;20.0;280.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>66</x>
-      <y>847</y>
-      <w>330</w>
-      <h>44</h>
+      <x>126</x>
+      <y>657</y>
+      <w>270</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>Choix nom ?
 lt=-&gt;&gt;&gt;</panel_attributes>
@@ -448,34 +434,34 @@ lt=-&gt;&gt;&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>66</x>
-      <y>880</y>
-      <w>330</w>
-      <h>44</h>
+      <x>126</x>
+      <y>684</y>
+      <w>270</w>
+      <h>36</h>
     </coordinates>
-    <panel_attributes>"Hercule"
+    <panel_attributes>entrerClavier(nomPerso)
 lt=-&gt;&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;20.0;280.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>66</x>
-      <y>638</y>
-      <w>330</w>
-      <h>44</h>
+      <x>126</x>
+      <y>522</y>
+      <w>270</w>
+      <h>36</h>
     </coordinates>
-    <panel_attributes>Choix nombre personnage (3 - 10) ?
+    <panel_attributes>Choix nombre personnage (1 à 10) ?
 lt=-&gt;&gt;&gt;</panel_attributes>
     <additional_attributes>280.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>66</x>
-      <y>671</y>
-      <w>330</w>
-      <h>44</h>
+      <x>126</x>
+      <y>549</y>
+      <w>270</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>entrerClavier(nbPerso)
 lt=-&gt;&gt;&gt;</panel_attributes>
@@ -484,21 +470,10 @@ lt=-&gt;&gt;&gt;</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>1375</x>
-      <y>308</y>
-      <w>198</w>
-      <h>77</h>
-    </coordinates>
-    <panel_attributes>interaction frame</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLFrame</id>
-    <coordinates>
       <x>0</x>
-      <y>715</y>
-      <w>451</w>
-      <h>220</h>
+      <y>585</y>
+      <w>441</w>
+      <h>432</h>
     </coordinates>
     <panel_attributes>loop
 --
@@ -506,5 +481,320 @@ halign=left
 while[i &lt; nbPerso]
 </panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>126</x>
+      <y>783</y>
+      <w>270</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Choix armes ?
+lt=-&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>280.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>126</x>
+      <y>819</y>
+      <w>270</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>entrerClavier(arme)
+lt=-&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;280.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1746</x>
+      <y>81</y>
+      <w>27</w>
+      <h>864</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;940.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1647</x>
+      <y>63</y>
+      <w>207</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>_StockChoixPersonnageBataille_
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1323</x>
+      <y>63</y>
+      <w>108</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>_StockArme_
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1503</x>
+      <y>63</y>
+      <w>108</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>_StockEquipement_
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1368</x>
+      <y>81</y>
+      <w>27</w>
+      <h>684</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;740.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1548</x>
+      <y>81</y>
+      <w>27</w>
+      <h>657</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;710.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>756</y>
+      <w>27</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>378</x>
+      <y>783</y>
+      <w>18</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>738</x>
+      <y>261</y>
+      <w>333</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>selectionEtreViavant("Armée 1", typeEtreVivant)
+lt=-&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>387</x>
+      <y>738</y>
+      <w>999</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>selectionArme(typeEtreVivant)
+lt=-&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;1090.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1368</x>
+      <y>747</y>
+      <w>18</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>387</x>
+      <y>774</y>
+      <w>999</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>afficherArme(typeEtreVivant)
+lt=-&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>1090.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1368</x>
+      <y>792</y>
+      <w>27</w>
+      <h>342</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;360.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>846</y>
+      <w>27</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>378</x>
+      <y>873</y>
+      <w>18</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>126</x>
+      <y>873</y>
+      <w>270</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Choix équipements ?
+lt=-&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>280.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>126</x>
+      <y>909</y>
+      <w>270</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>entrerClavier(equipement)
+lt=-&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;280.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>387</x>
+      <y>711</y>
+      <w>1179</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>selectionEquipement(typeEtreVivant)
+lt=-&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;1290.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1548</x>
+      <y>720</y>
+      <w>18</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>387</x>
+      <y>864</y>
+      <w>1179</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>afficherEquipement(typeEtreVivant)
+lt=-&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>1290.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1053</x>
+      <y>540</y>
+      <w>27</w>
+      <h>486</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;520.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>387</x>
+      <y>927</y>
+      <w>1377</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>creationPersonnageSurChampsBattaille(typeEtreVivant, perso, nomPerso, arme, equipement)
+lt=-&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;30.0;1510.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1746</x>
+      <y>927</y>
+      <w>18</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>387</x>
+      <y>954</y>
+      <w>1377</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;</panel_attributes>
+    <additional_attributes>1510.0;10.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>972</y>
+      <w>27</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
   </element>
 </diagram>
