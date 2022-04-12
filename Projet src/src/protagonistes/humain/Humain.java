@@ -1,7 +1,7 @@
 package protagonistes.humain;
 
 import affrontement.Bataille;
-import armes.Arme;
+import equipements.armes.Arme;
 import protagonistes.EtreVivant;
 
 public class Humain extends EtreVivant {

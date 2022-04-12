@@ -1,4 +1,4 @@
-package armes;
+package equipements.armes;
 
 import protagonistes.monstre.Dragon;
 import protagonistes.humain.Humain;
