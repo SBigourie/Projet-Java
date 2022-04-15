@@ -1,5 +1,6 @@
 package equipements.armes;
 
+import protagonistes.EtreVivant;
 import protagonistes.humain.Humain;
 import protagonistes.monstre.Monstre;
 
@@ -32,8 +33,9 @@ public class Arme {
     public void lacher () {
         this.proprietaire = null;
     }
-    public String attaque (Monstre monstre) {
-        return proprietaire.getNom() + " attaque " + monstre.getNom() + " avec son " + getNature() + "\n"
-                +monstre.subirAttaque(monstre,degat);
+
+    protected String attaque(EtreVivant etreVivant) {
+        return proprietaire.getNom() + " attaque " + etreVivant.getNom() + " avec son " + getNature() + "\n"
+                +etreVivant.subirAttaque(etreVivant,degat);
     }
 }
