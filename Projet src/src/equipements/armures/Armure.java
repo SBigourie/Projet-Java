@@ -39,9 +39,17 @@ public class Armure {
 	}
 	
 	public String prendreCout(EtreVivant etrevivant) {
-		this.getProprietaire().setVie(this.getProprietaire().getVie() + this.getNbVieAjouter());
-		return this.getProprietaire() + " dispose d'un " + this.getNature() + 
+		String str = this.getProprietaire() + " dispose d'un " + this.getNature() + 
 				" lui permettant d'encaisser les coûts venant de " + etrevivant.getNom();
+		
+		this.getProprietaire().setVie(this.getProprietaire().getVie() + this.getNbVieAjouter());
+		
+		if(this.getProprietaire().getVie() >= 0 ) {
+			return str + " mais cela n'a pas suffit pour le faire survivre.";
+		}else {
+			return str;
+		}
+		
 	}
     
 }
