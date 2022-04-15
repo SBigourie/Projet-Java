@@ -1,4 +1,4 @@
-package echiquier;
+package Echiquier;
 import joueur.Joueur;
 import protagonistes.EtreVivant;
 
