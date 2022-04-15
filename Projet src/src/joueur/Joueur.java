@@ -4,19 +4,21 @@ import affrontement.Camps;
 
 public class Joueur {
 	
-	private String nom;
+	private String nomJoueur;
 	private Camps camps;
 	
-	public Joueur(String nom) {
-		this.nom = nom;
+	public Joueur(String nomJoueur) {
+		this.nomJoueur = nomJoueur;
 	}
 
-	public String getNom() {
-		return nom;
+
+
+	public String getNomJoueur() {
+		return nomJoueur;
 	}
 
-	public void setNom(String nom) {
-		this.nom = nom;
+	public void setNomJoueur(String nomJoueur) {
+		this.nomJoueur = nomJoueur;
 	}
 
 	public Camps getCamps() {
