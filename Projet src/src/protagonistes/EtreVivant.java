@@ -25,8 +25,17 @@ public class EtreVivant {
     public String mourir() {
         return null;
     }
+    
 
-    public String subirAttaque(EtreVivant etreVivant, int forceAttaque){
+	public void setVie(int vie) {
+		this.vie = vie;
+	}
+	
+	public int getVie() {
+		return vie;
+	}
+
+	public String subirAttaque(EtreVivant etreVivant, int forceAttaque){
         this.vie = (this.vie - forceAttaque);
         if (this.vie > 0)
         {

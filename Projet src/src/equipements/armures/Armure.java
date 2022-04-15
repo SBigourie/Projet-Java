@@ -1,12 +1,13 @@
 package equipements.armures;
 
+import protagonistes.EtreVivant;
 import protagonistes.humain.Humain;
 
 public class Armure {
 	
-	private Humain proprietaire;
-    private String nature;
-    private int nbVieAjouter;
+	protected Humain proprietaire;
+	protected String nature;
+	protected int nbVieAjouter;
     
     public Armure(String nature, int nbVieAjouter) {
     	this.nature = nature;
@@ -35,6 +36,12 @@ public class Armure {
 
 	public void setNbVieAjouter(int nbVieAjouter) {
 		this.nbVieAjouter = nbVieAjouter;
+	}
+	
+	public String prendreCout(EtreVivant etrevivant) {
+		this.getProprietaire().setVie(this.getProprietaire().getVie() + this.getNbVieAjouter());
+		return this.getProprietaire() + " dispose d'un " + this.getNature() + 
+				" lui permettant d'encaisser les coûts venant de " + etrevivant.getNom();
 	}
     
 }
