@@ -4,20 +4,20 @@
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>310</x>
-      <y>220</y>
-      <w>290</w>
+      <x>80</x>
+      <y>20</y>
+      <w>330</w>
       <h>70</h>
     </coordinates>
-    <panel_attributes>Diagramme séquence système Sauvegarder Partie
+    <panel_attributes>Diagramme séquence système Recharger Partie
 bg=blue</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>640</x>
-      <y>360</y>
+      <x>410</x>
+      <y>160</y>
       <w>30</w>
       <h>130</h>
     </coordinates>
@@ -27,8 +27,8 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>250</x>
-      <y>320</y>
+      <x>20</x>
+      <y>120</y>
       <w>60</w>
       <h>110</h>
     </coordinates>
@@ -38,8 +38,8 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>600</x>
-      <y>340</y>
+      <x>370</x>
+      <y>140</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -50,8 +50,8 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>270</x>
-      <y>410</y>
+      <x>40</x>
+      <y>210</y>
       <w>30</w>
       <h>80</h>
     </coordinates>
@@ -61,8 +61,8 @@ bg=red</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>270</x>
-      <y>470</y>
+      <x>40</x>
+      <y>270</y>
       <w>20</w>
       <h>110</h>
     </coordinates>
@@ -73,8 +73,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>640</x>
-      <y>470</y>
+      <x>410</x>
+      <y>270</y>
       <w>20</w>
       <h>40</h>
     </coordinates>
@@ -85,20 +85,20 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>280</x>
-      <y>460</y>
+      <x>50</x>
+      <y>260</y>
       <w>380</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Sauvegarder Partie
+    <panel_attributes>Recharger Partie
 lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;20.0;360.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>640</x>
-      <y>500</y>
+      <x>410</x>
+      <y>300</y>
       <w>30</w>
       <h>60</h>
     </coordinates>
@@ -108,8 +108,8 @@ lt=-&gt;&gt;</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>640</x>
-      <y>540</y>
+      <x>410</x>
+      <y>340</y>
       <w>20</w>
       <h>40</h>
     </coordinates>
@@ -120,12 +120,12 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>280</x>
-      <y>540</y>
+      <x>50</x>
+      <y>340</y>
       <w>380</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Partie sauvegarder
+    <panel_attributes>Affichage de l'état sauvegarder
 lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>360.0;20.0;10.0;20.0</additional_attributes>
   </element>
