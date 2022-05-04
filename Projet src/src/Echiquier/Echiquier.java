@@ -32,7 +32,8 @@ public class Echiquier extends JFrame {
                 if (plateau[i][j] != null) {
                     System.out.print("| " + plateau[i][j].getNom() + " ");
                 } else {
-                    System.out.print("|      ");
+
+                    System.out.print("|        ");
                 }
             }
             System.out.println("|");
