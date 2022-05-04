@@ -37,11 +37,7 @@ public class StockEtreVivant {
     	String chaine = "";
     	System.out.println(etrevivant.getClass());
     }
-    
-    	
-    	
-    	
-    	
+
     	/*
         int i = 1;
         for (Heros leHeros : heros) {
