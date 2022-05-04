@@ -30,10 +30,9 @@ public class Echiquier extends JFrame {
         for (int i = 0; i < nbEtreVivant; i++) {
             for (int j = 0; j < nbEtreVivant / 2; j++) {
                 if (plateau[i][j] != null) {
-                    System.out.print("| " + plateau[i][j].toString() + " ");
+                    System.out.print("| " + plateau[i][j].getNom() + " ");
                 } else {
-
-                    System.out.print("|                           ");
+                    System.out.print("|      ");
                 }
             }
             System.out.println("|");
