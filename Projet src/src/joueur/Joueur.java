@@ -11,7 +11,6 @@ public class Joueur {
 		this.nomJoueur = nomJoueur;
 	}
 
-
 	//Récupére ne nom du joueur
 	public String getNomJoueur() {
 		return nomJoueur;
