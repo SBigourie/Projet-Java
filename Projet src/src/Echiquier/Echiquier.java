@@ -1,4 +1,5 @@
 package Echiquier;
+
 import joueur.Joueur;
 import protagonistes.EtreVivant;
 
@@ -6,23 +7,37 @@ import protagonistes.EtreVivant;
 public class Echiquier {
 
     int nbEtreVivant = 10;
-    private String tour = String.valueOf('b');
-    private Joueur joueur = new Joueur();
+    private int tour = 1;
+    private Joueur joueur1 = new Joueur(, 1);
+    private Joueur joueur2=  new Joueur(, 2);
     private EtreVivant[][] plateau = new EtreVivant[nbEtreVivant][nbEtreVivant];
 
 //nombre de case
 
     public Echiquier() {
 
-        while joueur = "Joueur1"{
-        for (int i = 0; i < nbEtreVivant; i++) {
-            for (int j = -1; j < 5; j++) {
-                plateau[0][j + 1] = new EtreVivant("toto",150);
+        while (joueur1.getNumJoueur() == 1) {
+            for (int i = 0; i < nbEtreVivant; i++) {
+                for (int j = -1; j < 5; j++) {
+                    plateau[0][j + 1] = new EtreVivant("toto", 150);
+                }
+                for (int j = -1; j < 5; j++) {
+                    plateau[1][j + 1] = new EtreVivant("tata", 200);
+                }
             }
-            for (int j = -1; j < 5; j++) {
-                plateau[1][j + 1] = new EtreVivant("tata", 200);
-            }
+            break;
         }
+
+        while (joueur2.getNumJoueur() == 2) {
+            for (int i = 0; i < nbEtreVivant; i++) {
+                for (int j = -1; j < 5; j++) {
+                    plateau[9][j + 1] = new EtreVivant("toto2", 150);
+                }
+                for (int j = -1; j < 5; j++) {
+                    plateau[8][j + 1] = new EtreVivant("tata2", 200);
+                }
+            }
+            break;
         }
     }
 
@@ -32,7 +47,7 @@ public class Echiquier {
         for (int i = 0; i < nbEtreVivant; i++) {
             for (int j = 0; j < nbEtreVivant / 2; j++) {
                 if (plateau[i][j] != null) {
-                    System.out.print("| " + plateau[i][j].getNom() +" / PV:"+ plateau[i][j].getVie() + " ");
+                    System.out.print("| " + plateau[i][j].getNom() + " / PV:" + plateau[i][j].getVie() + " ");
                 } else {
 
                     System.out.print("|        ");
@@ -57,17 +72,19 @@ public class Echiquier {
         }
 
         //A qui le tour
-        if (plateau[xOrig][yOrig].joueur(joueur) != tour) {
+        if (joueur1.getNumJoueur() != 1){
             return false;
         }
         if (plateau[xDest][yDest] != null) {
-            if (plateau[xDest][yDest].joueur(joueur) == plateau[xOrig][yOrig].joueur(joueur)){
+            if (plateau[xDest][yDest].joueur(joueur1) == plateau[xOrig][yOrig].joueur(joueur1)) {
                 return false;
             }
-
+            if (plateau[xDest][yDest].joueur(joueur2) == plateau[xOrig][yOrig].joueur(joueur2)) {
+                return false;
+            }
         }
 
-        if (!plateau[xOrig][yOrig].isValid(xOrig,yOrig,xDest,yDest)){
+        if (!plateau[xOrig][yOrig].isValid(xOrig, yOrig, xDest, yDest)) {
             return false;
         }
 
