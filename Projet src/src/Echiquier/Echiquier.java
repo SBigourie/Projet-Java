@@ -2,9 +2,8 @@ package Echiquier;
 import joueur.Joueur;
 import protagonistes.EtreVivant;
 
-import javax.swing.*;
 
-public class Echiquier extends JFrame {
+public class Echiquier {
 
     int nbEtreVivant = 10;
     private Joueur joueur = new Joueur("Joueur 1");
@@ -16,7 +15,7 @@ public class Echiquier extends JFrame {
 
         for (int i = 0; i < nbEtreVivant; i++) {
             for (int j = -1; j < 5; j++) {
-                plateau[0][j + 1] = new EtreVivant("toto", 150);
+                plateau[0][j + 1] = new EtreVivant("toto",150);
             }
             for (int j = -1; j < 5; j++) {
                 plateau[1][j + 1] = new EtreVivant("tata", 200);
@@ -30,7 +29,7 @@ public class Echiquier extends JFrame {
         for (int i = 0; i < nbEtreVivant; i++) {
             for (int j = 0; j < nbEtreVivant / 2; j++) {
                 if (plateau[i][j] != null) {
-                    System.out.print("| " + plateau[i][j].getNom() + " ");
+                    System.out.print("| " + plateau[i][j].getNom() +" / PV:"+ plateau[i][j].getVie() + " ");
                 } else {
 
                     System.out.print("|        ");
@@ -43,29 +42,34 @@ public class Echiquier extends JFrame {
 
     }
 
-//    public boolean moveTo(int xOrig, int yOrig, int xDest, int yDest) {
-//        if (xDest == xOrig && yDest == yOrig) {
-//            return false;
-//        }
-//        if (xOrig <= 0 || xOrig > 10 || xDest < 0 || yDest > 0) {
-//            return false;
-//        }
-//        if (plateau[xOrig][yOrig] == null) {
-//            return false;
-//        }
-//
-//        //A qui le tour
-//        if (plateau[xOrig][yOrig].getJoueur() != tour) {
-//            return false;
-//        }
-//        if (plateau[xDest][yDest] != null) {
-//            if (plateau[xDest][yDest].getJoueur() == plateau[xOrig][yOrig].getJoueur()){
-//                return false;
-//            }
-//
-//        }
-//        return true;
-//    }
+    public boolean moveTo(int xOrig, int yOrig, int xDest, int yDest) {
+        if (xDest == xOrig && yDest == yOrig) {
+            return false;
+        }
+        if (xOrig <= 0 || xOrig > 10 || xDest < 0 || yDest > 0) {
+            return false;
+        }
+        if (plateau[xOrig][yOrig] == null) {
+            return false;
+        }
+
+        //A qui le tour
+        if (plateau[xOrig][yOrig].joueur() != tour) {
+            return false;
+        }
+        if (plateau[xDest][yDest] != null) {
+            if (plateau[xDest][yDest].joueur() == plateau[xOrig][yOrig].joueur()){
+                return false;
+            }
+
+        }
+
+        if (!plateau[xOrig][yOrig].isValid(xOrig,yOrig,xDest,yDest)){
+            return false;
+        }
+
+        return true;
+    }
 
     public static void main(String[] args) {
         Echiquier echiquier = new Echiquier();

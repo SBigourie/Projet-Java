@@ -1,5 +1,6 @@
 package affrontement;
 
+import protagonistes.TypeEtreVivant;
 import protagonistes.*;
 import protagonistes.gobelin.Gobelin;
 import protagonistes.humain.Humain;

@@ -1,6 +1,7 @@
 package protagonistes;
 
 import affrontement.Bataille;
+import joueur.Joueur;
 
 public class EtreVivant {
     protected String nom;
@@ -11,6 +12,10 @@ public class EtreVivant {
     public EtreVivant(String nom, int vie) {
         this.vie=vie;
         this.nom=nom;
+    }
+
+    public String joueur(Joueur joueur1){
+        return joueur1.getNomJoueur();
     }
 
     public String getNom() {
@@ -25,7 +30,6 @@ public class EtreVivant {
     public String mourir() {
         return null;
     }
-    
 
 	public void setVie(int vie) {
 		this.vie = vie;
@@ -47,4 +51,22 @@ public class EtreVivant {
 
         }
     }
+
+    public boolean isValid (int xOrig, int yOrig, int xDest, int yDest){
+        boolean valid = false;
+        int x = xDest - xOrig;
+        int y = yDest - yOrig;
+        if (x<0){
+            x = -x;
+        }
+        if (y<0){
+            y = -y;
+        }
+        if (x<= 0 && x<= 1 && y>=0 && y<=1){
+            valid = true;
+        }
+        return valid;
+    }
+
+
 }
