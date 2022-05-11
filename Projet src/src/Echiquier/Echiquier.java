@@ -6,13 +6,15 @@ import protagonistes.EtreVivant;
 public class Echiquier {
 
     int nbEtreVivant = 10;
-    private Joueur joueur = new Joueur("Joueur 1");
+    private String tour = String.valueOf('b');
+    private Joueur joueur = new Joueur();
     private EtreVivant[][] plateau = new EtreVivant[nbEtreVivant][nbEtreVivant];
 
 //nombre de case
 
     public Echiquier() {
 
+        while joueur = "Joueur1"{
         for (int i = 0; i < nbEtreVivant; i++) {
             for (int j = -1; j < 5; j++) {
                 plateau[0][j + 1] = new EtreVivant("toto",150);
@@ -20,6 +22,7 @@ public class Echiquier {
             for (int j = -1; j < 5; j++) {
                 plateau[1][j + 1] = new EtreVivant("tata", 200);
             }
+        }
         }
     }
 
@@ -54,11 +57,11 @@ public class Echiquier {
         }
 
         //A qui le tour
-        if (plateau[xOrig][yOrig].joueur() != tour) {
+        if (plateau[xOrig][yOrig].joueur(joueur) != tour) {
             return false;
         }
         if (plateau[xDest][yDest] != null) {
-            if (plateau[xDest][yDest].joueur() == plateau[xOrig][yOrig].joueur()){
+            if (plateau[xDest][yDest].joueur(joueur) == plateau[xOrig][yOrig].joueur(joueur)){
                 return false;
             }
 
