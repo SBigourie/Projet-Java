@@ -1,11 +1,12 @@
 package joueur;
 
+import Echiquier.Echiquier;
 import affrontement.Camps;
 
 public class Joueur {
 	
 	private String nomJoueur;
-	private int numJoueur;
+	private final int numJoueur;
 	private Camps camps;
 
 
@@ -15,13 +16,15 @@ public class Joueur {
 		this.nomJoueur = nomJoueur;
 	}
 
+
+
 	//Récupére ne nom du joueur
 	public String getNomJoueur() {
 		return nomJoueur;
 	}
-	
+
 	public int getNumJoueur() {
-		return numJoueur;
+		return this.numJoueur;
 	}
 
 	public void setNomJoueur(String nomJoueur) {
