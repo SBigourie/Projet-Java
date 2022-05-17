@@ -69,23 +69,8 @@ public class setUp {
 					default :
 						System.out.println("Choix incorrect");
 				}
-				
-				
 								
-			}  
-			
-			
-			
-			
-			
-			
-				
-			
-			
-			
-				
-			
-			
+			}
 			i++;
 			numJoueur++;
 		}
@@ -94,6 +79,7 @@ public class setUp {
 		
 		for (Joueur joueur : tabJoueurs) {
 			System.out.println(joueur.getNomJoueur());
+			System.out.println(joueur.getNumJoueur());
 		}
 		
 		
