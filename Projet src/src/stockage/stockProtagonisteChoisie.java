@@ -7,7 +7,7 @@ public class stockProtagonisteChoisie {
 	//mettre le tableau de gobelin, humain, ... ici
 	// Après avoir 
 	
-	public void select(int choixProtagoniste,TypeEtreVivant typeEtre) {
+	public void save(int choixProtagoniste,TypeEtreVivant typeEtre) {
 		switch (typeEtre){
 		case GOBELIN:
 			switch(choixProtagoniste) {

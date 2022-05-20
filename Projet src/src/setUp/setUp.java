@@ -16,15 +16,10 @@ public class setUp {
 	public static void main(String[] args) {
 		Joueur[] tabJoueurs = new Joueur[2];
 		affichageEtreVivant affichageChoix = new affichageEtreVivant();
-		affichageProtagonistes affichageSelonChoix = new affichageProtagonistes();
-		stockProtagonisteChoisie stockageProtagoniste = new stockProtagonisteChoisie();
-		String nomProtagoniste;
-		int protagonisteChoisie;
-		
+        Scanner scanner = new Scanner(System.in);
+
 		int i = 0;
 		int numJoueur = 1;
-        Scanner scanner = new Scanner(System.in);
-        TypeEtreVivant typeEtre;
 
 		while (i < 2){
 			System.out.println("Entrer votre nom joueur n°" + numJoueur +": ");
@@ -40,40 +35,7 @@ public class setUp {
 			
 			for (int j = 0; j < nbPerso; j++) {
 				System.out.println("Choisir votre protagonsite :");
-				switch(camps) {
-					case 1:
-						typeEtre = TypeEtreVivant.GOBELIN;
-						affichageSelonChoix.affichageProtagonistes(typeEtre);
-						protagonisteChoisie = scanner.nextInt();
-						stockageProtagoniste.select(protagonisteChoisie,typeEtre);
-						System.out.println("Nom du protagoniste choisie ? :");
-						nomProtagoniste = scanner.next();
-						break;
-					case 2:
-						typeEtre = TypeEtreVivant.HUMAIN;
-						affichageSelonChoix.affichageProtagonistes(typeEtre);
-						protagonisteChoisie = scanner.nextInt();
-						System.out.println("Nom du protagoniste choisie ? :");
-						nomProtagoniste = scanner.next();
-						break;
-					case 3:
-						typeEtre = TypeEtreVivant.MAGE;
-						affichageSelonChoix.affichageProtagonistes(typeEtre);
-						protagonisteChoisie = scanner.nextInt();
-						System.out.println("Nom du protagoniste choisie ? :");
-						nomProtagoniste = scanner.next();
-						break;
-					case 4:
-						typeEtre = TypeEtreVivant.MONSTRE;
-						affichageSelonChoix.affichageProtagonistes(typeEtre);
-						protagonisteChoisie = scanner.nextInt();
-						System.out.println("Nom du protagoniste choisie ? :");
-						nomProtagoniste = scanner.next();
-						break;
-					default :
-						System.out.println("Choix incorrect");
-				}
-	
+				affichageProtagonistes.affichageSequenceDeProtagoniste(camps);
 			}
 			i++;
 			numJoueur++;

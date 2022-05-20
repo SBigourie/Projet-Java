@@ -1,5 +1,9 @@
 package protagonistes;
 
+import java.util.Scanner;
+
+import stockage.stockProtagonisteChoisie;
+
 public class affichageProtagonistes {
 
 	
@@ -20,7 +24,68 @@ public class affichageProtagonistes {
 				break;
 		}
 	}
+	
+	public static void affichageSequenceDeProtagoniste(int camps) {
 		
+	
+		affichageProtagonistes affichageSelonChoixProtagoniste = new affichageProtagonistes();
+		stockProtagonisteChoisie stockageProtagoniste = new stockProtagonisteChoisie();
+		affichageArme affichageSelonChoixArme = new affichageArme();
+		affichageEquipement affichageSelonChoixEquipement = new affichageEquipement();
+
+
+		
+		int protagonisteChoisie;
+		int armeChoisie;
+		int equipementChoisie;
+        Scanner scanner = new Scanner(System.in);
+        TypeEtreVivant typeEtre;
+        
+		//stockageProtagoniste.save(protagonisteChoisie,typeEtre);
+
+		
+		switch(camps) {
+			case 1:
+				typeEtre = TypeEtreVivant.GOBELIN;
+				affichageSelonChoixProtagoniste.affichageProtagonistes(typeEtre);
+				protagonisteChoisie = scanner.nextInt();
+				System.out.println("Choisir votre arme ? :");
+				affichageSelonChoixArme.affichageSelonChoix(typeEtre);
+				armeChoisie = scanner.nextInt();
+				System.out.println("Choisir votre équipement ? :");
+				affichageSelonChoixEquipement.affichageSelonChoix();
+				equipementChoisie = scanner.nextInt();
+				break;
+			case 2:
+				typeEtre = TypeEtreVivant.HUMAIN;
+				affichageSelonChoixProtagoniste.affichageProtagonistes(typeEtre);
+				protagonisteChoisie = scanner.nextInt();
+				System.out.println("Choisir votre arme ? :");
+				affichageSelonChoixArme.affichageSelonChoix(typeEtre);
+				armeChoisie = scanner.nextInt();
+				System.out.println("Choisir votre équipement ? :");
+				affichageSelonChoixEquipement.affichageSelonChoix();
+				equipementChoisie = scanner.nextInt();
+				break;
+			case 3:
+				typeEtre = TypeEtreVivant.MAGE;
+				affichageSelonChoixProtagoniste.affichageProtagonistes(typeEtre);
+				protagonisteChoisie = scanner.nextInt();
+				System.out.println("Choisir votre spell ? :");
+				affichageSelonChoixArme.affichageSelonChoix(typeEtre);
+				armeChoisie = scanner.nextInt();
+				break;
+			case 4:
+				typeEtre = TypeEtreVivant.MONSTRE;
+				affichageSelonChoixProtagoniste.affichageProtagonistes(typeEtre);
+				protagonisteChoisie = scanner.nextInt();
+				break;
+			default :
+				System.out.println("Choix incorrect");
+		}
+
+	}
+	
 	public void affichageEquipement(TypeEtreVivant typeEtre) {
 				
 	}
