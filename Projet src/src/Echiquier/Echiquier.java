@@ -9,8 +9,8 @@ public class Echiquier {
 
     int nbEtreVivant = 10;
     private int tour = 1;
-    private Joueur joueur1 = new Joueur("", 1);
-    private Joueur joueur2=  new Joueur("", 2);
+    private Joueur joueur1 = new Joueur(joueur.getNomJoueur(), 1);
+    private Joueur joueur2=  new Joueur(joueur.getNomJoueur(), 2);
     private EtreVivant[][] plateau = new EtreVivant[nbEtreVivant][nbEtreVivant];
 
 //nombre de case
