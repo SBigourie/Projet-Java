@@ -3,7 +3,7 @@ package stockage;
 import java.util.ArrayList;
 import java.util.List;
 
-import Echiquier.Echiquier;
+//import Echiquier.Echiquier;
 import protagonistes.EtreVivant;
 import protagonistes.gobelin.Gobelin;
 import protagonistes.humain.Humain;

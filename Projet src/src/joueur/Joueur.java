@@ -1,6 +1,6 @@
 package joueur;
 
-import Echiquier.Echiquier;
+//import Echiquier.Echiquier;
 import affrontement.Camps;
 
 public class Joueur {

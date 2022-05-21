@@ -24,7 +24,9 @@ public class affichageProtagonistes {
 				break;
 		}
 	}
-	
+
+
+
 	public static void affichageSequenceDeProtagoniste(int camps) {
 		
 	
