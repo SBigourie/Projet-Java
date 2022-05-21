@@ -3,17 +3,10 @@ package protagonistes;
 import java.util.Scanner;
 
 import joueur.Joueur;
-import protagonistes.gobelin.Gobelin;
 import protagonistes.gobelin.*;
-import protagonistes.humain.Barbare;
-import protagonistes.humain.Chevalier;
-import protagonistes.humain.Roi;
-import protagonistes.mage.Electrique;
-import protagonistes.mage.Feu;
-import protagonistes.mage.Glace;
-import protagonistes.monstre.Dragon;
-import protagonistes.monstre.Geant;
-import protagonistes.monstre.Squelette;
+import protagonistes.humain.*;
+import protagonistes.mage.*;
+import protagonistes.monstre.*;
 import stockage.stockProtagonisteChoisie;
 import affrontement.Bataille;
 
@@ -75,21 +68,21 @@ public class affichageProtagonistes {
 				equipementChoisie = scanner.nextInt();				
 				switch (protagonisteChoisie){
 					case 1 :
-						Rouge rouge = new Rouge("Rouge");
+						Rouge rouge = new Rouge("   Rouge  ");
 						b.ajouter(rouge);
 						rouge.rejointBataille(b);
 						rouge.getBataille().getCampsGobelin().ajouterEtreVivant(rouge);
 						rouge.getBataille().getPlateau()[i][j] = rouge;
 						break;
 					case 2:
-						Violet violet = new Violet("Violet");
+						Violet violet = new Violet("  Violet  ");
 						violet.rejointBataille(b);
 						violet.getBataille().getCampsGobelin().ajouterEtreVivant(violet);
 						violet.getBataille().getPlateau()[i][j] = violet;
 
 						break;
 					case 3:
-						Vert vert = new Vert("Vert");
+						Vert vert = new Vert("   Vert   ");
 						vert.rejointBataille(b);
 						vert.getBataille().getCampsGobelin().ajouterEtreVivant(vert);
 						vert.getBataille().getPlateau()[i][j] = vert;
@@ -109,20 +102,20 @@ public class affichageProtagonistes {
 				equipementChoisie = scanner.nextInt();
 				switch (protagonisteChoisie){
 					case 2 :
-						Chevalier chevalier = new Chevalier("Chevalier");
+						Chevalier chevalier = new Chevalier(" Chevalier");
 						chevalier.rejointBataille(b);
 						chevalier.getBataille().getCampsHumain().ajouterEtreVivant(chevalier);
 						chevalier.getBataille().getPlateau()[i][j] = chevalier;
 						break;
 					case 1:
-						Barbare barbare = new Barbare("Barbare");
+						Barbare barbare = new Barbare(" Barbare  ");
 						barbare.rejointBataille(b);
 						barbare.getBataille().getCampsHumain().ajouterEtreVivant(barbare);
 						barbare.getBataille().getPlateau()[i][j] = barbare;
 
 						break;
 					case 3:
-						Roi roi = new Roi("Roi");
+						Roi roi = new Roi(" Roi      ");
 						roi.rejointBataille(b);
 						roi.getBataille().getCampsHumain().ajouterEtreVivant(roi);
 						roi.getBataille().getPlateau()[i][j] = roi;
@@ -144,13 +137,13 @@ public class affichageProtagonistes {
 						electrique.getBataille().getPlateau()[i][j] = electrique;
 						break;
 					case 2:
-						Feu feu = new Feu("Feu");
+						Feu feu = new Feu(" Feu      ");
 						feu.rejointBataille(b);
 						feu.getBataille().getCampsMage().ajouterEtreVivant(feu);
 						feu.getBataille().getPlateau()[i][j] = feu;
 						break;
 					case 3:
-						Glace glace = new Glace("Glace");
+						Glace glace = new Glace(" Glace    ");
 						glace.rejointBataille(b);
 						glace.getBataille().getCampsMage().ajouterEtreVivant(glace);
 						glace.getBataille().getPlateau()[i][j] = glace;
@@ -163,20 +156,20 @@ public class affichageProtagonistes {
 				protagonisteChoisie = scanner.nextInt();
 				switch (protagonisteChoisie){
 					case 1 :
-						Dragon dragon = new Dragon("Dragon");
+						Dragon dragon = new Dragon(" Dragon   ");
 						dragon.rejointBataille(b);
 						dragon.getBataille().getCampsMonstre().ajouterEtreVivant(dragon);
 						dragon.getBataille().getPlateau()[i][j] = dragon;
 						break;
 					case 2:
-						Geant geant = new Geant("Geant");
+						Geant geant = new Geant(" Geant    ");
 						geant.rejointBataille(b);
 						geant.getBataille().getCampsMonstre().ajouterEtreVivant(geant);
 						geant.getBataille().getPlateau()[i][j] = geant;
 
 						break;
 					case 3:
-						Squelette squelette = new Squelette("Squelette");
+						Squelette squelette = new Squelette("Squelette ");
 						squelette.rejointBataille(b);
 						squelette.getBataille().getCampsMonstre().ajouterEtreVivant(squelette);
 						squelette.getBataille().getPlateau()[i][j] = squelette;

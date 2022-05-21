@@ -15,7 +15,7 @@ import stockage.stockProtagonisteChoisie;
 public class setUp {
     int nbPerso;
     int numJoueur = 1;
-    private EtreVivant[][] plateau  = new EtreVivant[10][10];
+    private EtreVivant[][] plateau = new EtreVivant[10][10];
 
 
     public setUp() {
@@ -23,10 +23,44 @@ public class setUp {
         Joueur[] tabJoueurs = new Joueur[2];
         affichageEtreVivant affichageChoix = new affichageEtreVivant();
         Scanner scanner = new Scanner(System.in);
-        
-        
+
 
         int i = 0;
+        while (i < 1) {
+            System.out.println("Entrer votre nom joueur n°" + numJoueur + ": ");
+            String nom = scanner.next();
+            tabJoueurs[i] = new Joueur(nom, numJoueur);
+
+            System.out.println("Choisir votre camps (exemple : 1) pour Gobelin) :");
+            affichageChoix.affichage();
+            int camps = scanner.nextInt();
+
+            System.out.println("Combien de personnages voulez-vous ? (1 à 10)");
+            nbPerso = scanner.nextInt();
+
+            int k = 0;
+            int a=0;
+
+            for (int j = 0; j < nbPerso; j++) {
+                System.out.println("Choisir votre protagonsite :");
+                if (nbPerso > 5) {
+                    if (k < 5) {
+                        affichageProtagonistes.affichageSequenceDeProtagoniste(camps, b, 0, j);
+                        k++;
+                    }
+                    else if (k < 11) {
+                        affichageProtagonistes.affichageSequenceDeProtagoniste(camps, b, 1, a);
+                        a++;
+                        k++;
+                    }
+                }
+                else {
+                    affichageProtagonistes.affichageSequenceDeProtagoniste(camps, b, 0, j);
+                }
+            }
+            numJoueur++;
+            i++;
+        }
         while (i < 2) {
             System.out.println("Entrer votre nom joueur n°" + numJoueur + ": ");
             String nom = scanner.next();
@@ -38,10 +72,14 @@ public class setUp {
 
             System.out.println("Combien de personnages voulez-vous ? (1 à 10)");
             nbPerso = scanner.nextInt();
-            
+
             for (int j = 0; j < nbPerso; j++) {
                 System.out.println("Choisir votre protagonsite :");
-                    affichageProtagonistes.affichageSequenceDeProtagoniste(camps, b, 9-i*8, j);
+                if (nbPerso > 5) {
+                    affichageProtagonistes.affichageSequenceDeProtagoniste(camps, b, 8, j);
+                } else {
+                    affichageProtagonistes.affichageSequenceDeProtagoniste(camps, b, 9, j);
+                }
             }
             numJoueur++;
             i++;
@@ -49,20 +87,20 @@ public class setUp {
     }
 
     public void affichage() {
-        System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("---------------------------------------------------------------------------------------------------------------");
         for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10 / 2; j++) {
+            for (int j = 0; j < 5; j++) {
                 if (plateau[i][j] != null) {
                     System.out.print("| " + plateau[i][j].getNom() + " / PV:" + plateau[i][j].getVie() + " ");
-                } else
-                {
-
-                    System.out.print("|");
+                } else {
+                    System.out.print("|                     ");
                 }
+//                System.out.println("|");
             }
+            System.out.println("|");
+            System.out.println("---------------------------------------------------------------------------------------------------------------");
         }
-        System.out.println("|");
-        System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+
 
     }
 
