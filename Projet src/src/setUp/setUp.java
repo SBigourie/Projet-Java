@@ -15,7 +15,7 @@ import stockage.stockProtagonisteChoisie;
 public class setUp {
     int nbPerso;
     int numJoueur = 1;
-    private EtreVivant[][] plateau = new EtreVivant[10][10];
+    private EtreVivant[][] plateau  = new EtreVivant[10][10];
 
 
     public setUp() {
@@ -57,7 +57,7 @@ public class setUp {
                 } else
                 {
 
-                    System.out.print("|    ici    ");
+                    System.out.print("|");
                 }
             }
         }
