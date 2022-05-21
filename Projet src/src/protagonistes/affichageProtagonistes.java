@@ -63,10 +63,11 @@ public class affichageProtagonistes {
 				armeChoisie = scanner.nextInt();
 				System.out.println("Choisir votre équipement ? :");
 				affichageSelonChoixEquipement.affichageSelonChoix();
-				equipementChoisie = scanner.nextInt();
+				equipementChoisie = scanner.nextInt();				
 				switch (typeEtre){
 					case ROUGE :
 						Rouge rouge = new Rouge("Rouge");
+						b.ajouter(rouge);
 						rouge.rejointBataille(b);
 						rouge.getBataille().getCampsGobelin().ajouterEtreVivant(rouge);
 						rouge.getBataille().getPlateau()[i][j] = rouge;

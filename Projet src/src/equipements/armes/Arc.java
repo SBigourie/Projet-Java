@@ -5,7 +5,7 @@ public class Arc extends Arme{
     protected int nombreFleche;
 
     public Arc(int nombreFleche) {
-        super("arc", 0);
+        super("arc", 15);
         this.nombreFleche = nombreFleche;
     }
 

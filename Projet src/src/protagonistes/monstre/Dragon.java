@@ -7,7 +7,6 @@ public class Dragon extends Monstre {
 
     public Dragon(String nom) {
         super(nom);
-        vie = 0;
     }
     public String parler(String s) {
         return "Le Dragon"+nom+" : "+s+"\n";

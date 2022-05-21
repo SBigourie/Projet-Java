@@ -23,6 +23,8 @@ public class setUp {
         Joueur[] tabJoueurs = new Joueur[2];
         affichageEtreVivant affichageChoix = new affichageEtreVivant();
         Scanner scanner = new Scanner(System.in);
+        
+        
 
         int i = 0;
         while (i < 2) {
@@ -36,11 +38,10 @@ public class setUp {
 
             System.out.println("Combien de personnages voulez-vous ? (1 à 10)");
             nbPerso = scanner.nextInt();
-
+            
             for (int j = 0; j < nbPerso; j++) {
                 System.out.println("Choisir votre protagonsite :");
                     affichageProtagonistes.affichageSequenceDeProtagoniste(camps, b, 9-i*8, j);
-
             }
             numJoueur++;
             i++;

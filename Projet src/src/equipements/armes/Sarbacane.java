@@ -5,7 +5,7 @@ public class Sarbacane extends Arme {
     protected int nombreFlechette;
 
     public Sarbacane(int nombreFlechette) {
-        super("sarbacane",0);
+        super("sarbacane",10);
         this.nombreFlechette = nombreFlechette;
     }
 
