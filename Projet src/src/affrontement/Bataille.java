@@ -24,7 +24,7 @@ public class Bataille {
 	}
 
 	public Bataille(EtreVivant[][] j){
-		plateau =j;
+		plateau = j;
 	}
 	public Camps getCampsHumain() {
 		return campsHumain;

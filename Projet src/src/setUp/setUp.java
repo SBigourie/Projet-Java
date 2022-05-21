@@ -15,7 +15,7 @@ import stockage.stockProtagonisteChoisie;
 public class setUp {
     int nbPerso;
     int numJoueur = 1;
-    private EtreVivant[][] plateau = new EtreVivant[10][10];
+    private EtreVivant[][] plateau  = new EtreVivant[10][10];
 
 
     public setUp() {
@@ -39,7 +39,7 @@ public class setUp {
 
             for (int j = 0; j < nbPerso; j++) {
                 System.out.println("Choisir votre protagonsite :");
-                    affichageProtagonistes.affichageSequenceDeProtagoniste(camps, b, 9-i*8, j);
+                    affichageProtagonistes.affichageSequenceDeProtagoniste(camps, b, 9-i, j);
 
             }
             numJoueur++;
@@ -56,7 +56,7 @@ public class setUp {
                 } else
                 {
 
-                    System.out.print("|    ici    ");
+                    System.out.print("|");
                 }
             }
         }
