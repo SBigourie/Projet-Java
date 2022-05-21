@@ -1,5 +1,6 @@
 package affrontement;
 
+import joueur.Joueur;
 import protagonistes.TypeEtreVivant;
 import protagonistes.*;
 import protagonistes.gobelin.Gobelin;
@@ -8,10 +9,54 @@ import protagonistes.mage.Mage;
 import protagonistes.monstre.Monstre;
 
 public class Bataille {
+	private EtreVivant[][] plateau;
 	private Camps campsHumain = new Camps();
 	private Camps campsMonstre = new Camps();
 	private Camps campsGobelin = new Camps();
 	private Camps campsMage = new Camps();
+
+	public EtreVivant[][] getPlateau() {
+		return plateau;
+	}
+
+	public void setPlateau(EtreVivant[][] plateau) {
+		this.plateau = plateau;
+	}
+
+	public Bataille(EtreVivant[][] j){
+		plateau =j;
+	}
+	public Camps getCampsHumain() {
+		return campsHumain;
+	}
+
+	public void setCampsHumain(Camps campsHumain) {
+		this.campsHumain = campsHumain;
+	}
+
+	public void setCampsMonstre(Camps campsMonstre) {
+		this.campsMonstre = campsMonstre;
+	}
+
+	public void setCampsGobelin(Camps campsGobelin) {
+		this.campsGobelin = campsGobelin;
+	}
+
+	public void setCampsMage(Camps campsMage) {
+		this.campsMage = campsMage;
+	}
+
+	public Camps getCampsMonstre() {
+		return campsMonstre;
+	}
+
+	public Camps getCampsGobelin() {
+		return campsGobelin;
+	}
+
+	public Camps getCampsMage() {
+		return campsMage;
+	}
 
 	public String ajouter(Humain humain) {
 		String texte = "";

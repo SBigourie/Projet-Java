@@ -2,10 +2,14 @@ package protagonistes;
 
 import java.util.Scanner;
 
+import joueur.Joueur;
+import protagonistes.gobelin.Gobelin;
+import protagonistes.gobelin.*;
 import stockage.stockProtagonisteChoisie;
+import affrontement.Bataille;
 
 public class affichageProtagonistes {
-
+	private Bataille bataille ;
 	
 	public void affichageProtagonistes(TypeEtreVivant typeEtre) {
 		
@@ -25,18 +29,22 @@ public class affichageProtagonistes {
 		}
 	}
 
+	public Bataille getBataille() {
+		return bataille;
+	}
 
+	public void setBataille(Bataille bataille) {
+		this.bataille = bataille;
+	}
 
-	public static void affichageSequenceDeProtagoniste(int camps) {
+	public static void affichageSequenceDeProtagoniste(int camps,Bataille b,int i , int j) {
 		
-	
+
 		affichageProtagonistes affichageSelonChoixProtagoniste = new affichageProtagonistes();
 		stockProtagonisteChoisie stockageProtagoniste = new stockProtagonisteChoisie();
 		affichageArme affichageSelonChoixArme = new affichageArme();
 		affichageEquipement affichageSelonChoixEquipement = new affichageEquipement();
 
-
-		
 		int protagonisteChoisie;
 		int armeChoisie;
 		int equipementChoisie;
@@ -45,7 +53,6 @@ public class affichageProtagonistes {
         
 		//stockageProtagoniste.save(protagonisteChoisie,typeEtre);
 
-		
 		switch(camps) {
 			case 1:
 				typeEtre = TypeEtreVivant.GOBELIN;
@@ -57,7 +64,31 @@ public class affichageProtagonistes {
 				System.out.println("Choisir votre équipement ? :");
 				affichageSelonChoixEquipement.affichageSelonChoix();
 				equipementChoisie = scanner.nextInt();
+				switch (typeEtre){
+					case ROUGE :
+						Rouge rouge = new Rouge("Rouge");
+						rouge.rejointBataille(b);
+						rouge.getBataille().getCampsGobelin().ajouterEtreVivant(rouge);
+						rouge.getBataille().getPlateau()[i][j] = rouge;
+
+						break;
+					case VIOLET:
+						Violet violet = new Violet("Violet");
+						violet.rejointBataille(b);
+						violet.getBataille().getCampsGobelin().ajouterEtreVivant(violet);
+						violet.getBataille().getPlateau();
+
+						break;
+					case VERT:
+						Vert vert = new Vert("Vert");
+						vert.rejointBataille(b);
+						vert.getBataille().getCampsGobelin().ajouterEtreVivant(vert);
+						vert.getBataille().getPlateau();
+
+						break;
+				}
 				break;
+
 			case 2:
 				typeEtre = TypeEtreVivant.HUMAIN;
 				affichageSelonChoixProtagoniste.affichageProtagonistes(typeEtre);

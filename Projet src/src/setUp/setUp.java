@@ -2,6 +2,7 @@ package setUp;
 
 import java.util.Scanner;
 
+import affrontement.Bataille;
 import joueur.Joueur;
 import protagonistes.EtreVivant;
 import protagonistes.TypeEtreVivant;
@@ -12,13 +13,13 @@ import stockage.stockProtagonisteChoisie;
 
 
 public class setUp {
-
     int nbPerso;
-    int numJoueur;
-    private affichageProtagonistes[][] plateau = new affichageProtagonistes[nbPerso][nbPerso];
+    int numJoueur = 1;
+    private EtreVivant[][] plateau = new EtreVivant[10][10];
 
 
     public setUp() {
+        Bataille b = new Bataille(this.plateau);
         Joueur[] tabJoueurs = new Joueur[2];
         affichageEtreVivant affichageChoix = new affichageEtreVivant();
         Scanner scanner = new Scanner(System.in);
@@ -38,61 +39,32 @@ public class setUp {
 
             for (int j = 0; j < nbPerso; j++) {
                 System.out.println("Choisir votre protagonsite :");
-                affichageProtagonistes.affichageSequenceDeProtagoniste(camps);
+                    affichageProtagonistes.affichageSequenceDeProtagoniste(camps, b, 9-i*8, j);
 
-                while (numJoueur == 1) {
-
-                    for (int k = 0; k < nbPerso; k++) {
-                        for (int l = -1; l < 5; l++) {
-                            Object stockProtagonisteChoisie = null;
-                            plateau[0][l + 1] = new affichageProtagonistes();
-                        }
-                        for (int l = -1; l < 5; l++) {
-                            plateau[1][l + 1] = new affichageProtagonistes();
-                        }
-                    }
-                    break;
-                }
-                while (numJoueur == 2) {
-                    for (int k = 0; k < nbPerso; k++) {
-                        for (int l = -1; l < 5; l++) {
-                            plateau[9][l + 1] = new affichageProtagonistes();
-                        }
-                        for (int l = -1; l < 5; l++) {
-                            plateau[8][l + 1] = new affichageProtagonistes();
-                        }
-                    }
-                    break;
-                }
             }
-            i++;
             numJoueur++;
+            i++;
         }
-
-        for (Joueur joueur : tabJoueurs) {
-            System.out.println(joueur.getNomJoueur());
-            System.out.println(joueur.getNumJoueur());
-        }
-
     }
+
     public void affichage() {
-
         System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-        for (int i = 0; i < nbPerso; i++) {
-            for (int j = 0; j < nbPerso / 2; j++) {
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10 / 2; j++) {
                 if (plateau[i][j] != null) {
-//                    System.out.print("| " + plateau[i][j].affichageProtagonistes() + " / PV:" + plateau[i][j].getVie() + " ");
-                } else {
+                    System.out.print("| " + plateau[i][j].getNom() + " / PV:" + plateau[i][j].getVie() + " ");
+                } else
+                {
 
-                    System.out.print("|        ");
+                    System.out.print("|    ici    ");
                 }
             }
-            System.out.println("|");
-            System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-
         }
+        System.out.println("|");
+        System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
     }
+
 
     public static void main(String[] args) {
         setUp setUp = new setUp();

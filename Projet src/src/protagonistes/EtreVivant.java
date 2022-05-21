@@ -14,6 +14,26 @@ public class EtreVivant {
         this.nom=nom;
     }
 
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public Bataille getBataille() {
+        return bataille;
+    }
+
+    public void setBataille(Bataille bataille) {
+        this.bataille = bataille;
+    }
+
+    public Bataille getEliminer() {
+        return eliminer;
+    }
+
+    public void setEliminer(Bataille eliminer) {
+        this.eliminer = eliminer;
+    }
+
     public String joueur(Joueur joueur1){
         return joueur1.getNomJoueur();
     }
