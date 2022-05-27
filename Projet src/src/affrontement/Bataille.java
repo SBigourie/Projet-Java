@@ -1,13 +1,16 @@
 package affrontement;
 
 import protagonistes.TypeEtreVivant;
+
+import java.io.Serializable;
+
 import protagonistes.*;
 import protagonistes.gobelin.Gobelin;
 import protagonistes.humain.Humain;
 import protagonistes.mage.Mage;
 import protagonistes.monstre.Monstre;
 
-public class Bataille {
+public class Bataille implements Serializable{
 	private EtreVivant[][] plateau;
 	private Camps campsHumain = new Camps();
 	private Camps campsMonstre = new Camps();

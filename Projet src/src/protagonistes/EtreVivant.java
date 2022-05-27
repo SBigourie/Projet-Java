@@ -1,8 +1,10 @@
 package protagonistes;
 
+import java.io.Serializable;
+
 import affrontement.Bataille;
 
-public class EtreVivant {
+public class EtreVivant implements Serializable{
 
     protected String nom;
     protected int vie;

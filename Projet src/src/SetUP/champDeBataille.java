@@ -6,13 +6,18 @@ import Affichage.affichageProtagonistes;
 import affrontement.Bataille;
 import protagonistes.EtreVivant;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class champDeBataille {
+public class champDeBataille implements Serializable{
 
     int nbPerso;
     int numJoueur = 1;
-    private EtreVivant[][] plateau = new EtreVivant[10][10];
+    private static EtreVivant[][] plateau = new EtreVivant[10][10];
 
     private char tour = '1';
 
@@ -126,7 +131,7 @@ public class champDeBataille {
 
 //      A qui le tour
         if (plateau[xOrig][yOrig].getJoueur() != numJoueur) {
-            throw new IllegalArgumentException("Ce n'est pas Ã  toi de jouer");
+            throw new IllegalArgumentException("Ce protagoniste ne t'appartient pas");
         }
         if (plateau[xDest][yDest] != null) {
             if (plateau[xDest][yDest].getJoueur() == plateau[xOrig][yOrig].getJoueur()) {
@@ -161,5 +166,30 @@ public class champDeBataille {
         }
         return true;
     }
+    
+    public static void saveGame() {
+		try {
+			FileOutputStream fos = new FileOutputStream("backup.sav");
+			ObjectOutputStream oos = new ObjectOutputStream(fos);
+			oos.writeObject(plateau);
+			oos.flush();
+			oos.close();
+			System.out.println("Jeu sauvegarder \n");
+		}catch (Exception e) {
+			System.out.println("Erreur : problème lors de la sauvegarde \n" + e);
+		}
+	}
+	
+	public static void loadGame() {
+		try {
+			FileInputStream fis = new FileInputStream("backup.sav");
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			plateau = (EtreVivant[][]) ois.readObject();
+			ois.close();
+			System.out.println("Jeu charger \n");
+		}catch (Exception e) {
+			System.out.println("Erreur : problème lors du chargement du jeu \n" + e);
+		}
+	}
 
 }

@@ -2,10 +2,11 @@ package affrontement;
 
 import protagonistes.EtreVivant;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Camps {
+public class Camps implements Serializable{
 	private List<EtreVivant> compagnons = new ArrayList<>();
 
 	public void ajouterEtreVivant(EtreVivant compagnon) {

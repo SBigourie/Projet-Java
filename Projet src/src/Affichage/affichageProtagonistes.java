@@ -1,5 +1,6 @@
 package Affichage;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
 
@@ -10,7 +11,7 @@ import protagonistes.mage.*;
 import protagonistes.monstre.*;
 import affrontement.Bataille;
 
-public class affichageProtagonistes {
+public class affichageProtagonistes implements Serializable{
 	private Bataille bataille ;
 	
 	public void affichageProtagonistes(TypeEtreVivant typeEtre) {
