@@ -1,4 +1,6 @@
-package protagonistes;
+package Affichage;
+
+import protagonistes.TypeEtreVivant;
 
 public class affichageArme {
 	

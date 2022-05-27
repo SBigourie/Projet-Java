@@ -1,4 +1,4 @@
-package protagonistes;
+package Affichage;
 
 public class affichageEquipement {
 	

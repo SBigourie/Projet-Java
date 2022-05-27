@@ -1,4 +1,4 @@
-package protagonistes;
+package SetUP;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

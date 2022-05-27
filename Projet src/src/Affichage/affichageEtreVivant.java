@@ -1,4 +1,4 @@
-package protagonistes;
+package Affichage;
 
 import java.util.ArrayList;
 import java.util.List;

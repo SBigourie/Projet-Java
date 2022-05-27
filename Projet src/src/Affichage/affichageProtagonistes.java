@@ -1,8 +1,9 @@
-package protagonistes;
+package Affichage;
 
 import java.util.Scanner;
 
 
+import protagonistes.TypeEtreVivant;
 import protagonistes.gobelin.*;
 import protagonistes.humain.*;
 import protagonistes.mage.*;

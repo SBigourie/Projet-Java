@@ -1,7 +1,10 @@
-package protagonistes;
+package SetUP;
 
 
+import Affichage.affichageEtreVivant;
+import Affichage.affichageProtagonistes;
 import affrontement.Bataille;
+import protagonistes.EtreVivant;
 
 import java.util.Scanner;
 
@@ -151,8 +154,8 @@ public class Echiquier {
         return true;
     }
 
-    public static void main(String[] args) {
-        Echiquier echiquier = new Echiquier();
-        echiquier.affichage();
-    }
+//    public static void main(String[] args) {
+//        Echiquier echiquier = new Echiquier();
+//        echiquier.affichage();
+//    }
 }
