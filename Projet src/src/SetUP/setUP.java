@@ -8,13 +8,15 @@ public class setUP {
         System.out.println("Saisir xOrig, yOrig, xDest, yDest:");
         int xOrig = 0, yOrig, xDest, yDest;
         Scanner scanner = new Scanner(System.in);
+        champDeBataille.numJoueur--;
+
 
 
         while (xOrig >= 0) {
 
             champDeBataille.affichage();
             try {
-                System.out.println("Joueur "+ champDeBataille.numJoueur + "Saisir xOrig, yOrig, xDest, yDest:");
+                System.out.println("Joueur "+ champDeBataille.numJoueur + " Saisir xOrig, yOrig, xDest, yDest:");
                 xOrig = scanner.nextInt();
                 yOrig = scanner.nextInt();
                 xDest = scanner.nextInt();

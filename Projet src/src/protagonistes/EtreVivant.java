@@ -7,13 +7,13 @@ public class EtreVivant {
     protected String nom;
     protected int vie;
     protected int degat;
-    protected char joueur;
+    protected int joueur;
 
-    public char getJoueur() {
+    public int getJoueur() {
         return joueur;
     }
 
-    public void setJoueur(char joueur) {
+    public void setJoueur(int joueur) {
         this.joueur = joueur;
     }
 

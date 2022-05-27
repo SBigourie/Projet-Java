@@ -25,12 +25,12 @@ public class champDeBataille {
         int i = 0;
         while (i < 1) {
 
-            System.out.println("Joueur nÂ°1 veuillez choisir votre camps (exemple : 1) pour Gobelin) :");
+            System.out.println("Joueur n°1 veuillez choisir votre camps (exemple : 1) pour Gobelin) :");
 
             affichageChoix.affichage();
             int campsJoueur1 = scanner.nextInt();
 
-            System.out.println("Combien de personnages voulez-vous ? (1 Ã  6)");
+            System.out.println("Combien de personnages voulez-vous ? (1 à 6)");
             nbPerso = scanner.nextInt();
 
             int k = 0;
@@ -41,30 +41,31 @@ public class champDeBataille {
                 System.out.println("Choisir votre protagonsite :");
                 if (nbPerso > 3) {
                     if (k < 3) {
-                        affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur1, b, 0, j);
+                        affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur1, b, 0, j,numJoueur);
                         k++;
                     }
                     else if (k < 7) {
-                        affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur1, b, 1, a);
+                        affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur1, b, 1, a,numJoueur);
                         a++;
                         k++;
                     }
                 }
                 else {
-                    affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur1, b, 0, j);
+                    affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur1, b, 0, j,numJoueur);
                 }
             }
-            numJoueur ++;
             i++;
         }
 
+        numJoueur ++;
+
         while (i < 2) {
 
-            System.out.println("Joueur nÂ°2 veuillez choisir camps (exemple : 1) pour Gobelin) :");
+            System.out.println("Joueur n°2 veuillez choisir camps (exemple : 1) pour Gobelin) :");
             affichageChoix.affichage();
             int campsJoueur2 = scanner.nextInt();
 
-            System.out.println("Combien de personnages voulez-vous ? (1 Ã  6)");
+            System.out.println("Combien de personnages voulez-vous ? (1 à 6)");
             nbPerso = scanner.nextInt();
 
             int k = 0;
@@ -74,23 +75,20 @@ public class champDeBataille {
                 System.out.println("Choisir votre protagonsite :");
                 if (nbPerso > 3) {
                     if (k < 3) {
-                        affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur2, b, 6, j);
+                        affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur2, b, 6, j,numJoueur);
                         k++;
                     }
                     else if (k < 7) {
-                        affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur2, b, 7, a);
+                        affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur2, b, 7, a,numJoueur);
                         a++;
                         k++;
                     }
                 }
                 else {
-                    affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur2, b, 7, j);
+                    affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur2, b, 7, j,numJoueur);
                 }
 
             }
-
-
-            numJoueur ++;
             i++;
         }
     }
@@ -126,8 +124,8 @@ public class champDeBataille {
             throw new IllegalArgumentException("Pas de protagonistes Ã  cette emplacement");
         }
 
-//        A qui le tour
-        if (plateau[xDest][yDest].getJoueur() != numJoueur) {
+//      A qui le tour
+        if (plateau[xOrig][yOrig].getJoueur() != numJoueur) {
             throw new IllegalArgumentException("Ce n'est pas Ã  toi de jouer");
         }
         if (plateau[xDest][yDest] != null) {
@@ -144,8 +142,16 @@ public class champDeBataille {
 
         plateau[xDest][yDest] = plateau[xOrig][yOrig];
         plateau[xOrig][yOrig] = null;
+        
+        if (this.numJoueur == 1) {
+        	this.numJoueur++;
+        }else {
+        	this.numJoueur--;
+        }
+     
 
-        if (tour == 1 ) {
+
+      if (tour == 1 ) {
             nbPerso = 2;
             tour = 2;
         }
