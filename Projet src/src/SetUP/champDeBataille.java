@@ -8,7 +8,7 @@ import protagonistes.EtreVivant;
 
 import java.util.Scanner;
 
-public class Echiquier {
+public class champDeBataille {
 
     int nbPerso;
     int numJoueur = 1;
@@ -17,7 +17,7 @@ public class Echiquier {
     private char tour = '1';
 
 
-    public Echiquier() {
+    public champDeBataille() {
         Bataille b = new Bataille(this.plateau);
         affichageEtreVivant affichageChoix = new affichageEtreVivant();
         Scanner scanner = new Scanner(System.in);
