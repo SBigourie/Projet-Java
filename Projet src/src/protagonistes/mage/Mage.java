@@ -8,7 +8,7 @@ public class Mage extends EtreVivant {
 	private int nbPointsAttaque;
 	
     public Mage(String nom,int nbPointsAttaque){
-        super(nom,100);
+        super(nom,100,0);
     }
 
     public int getNbPointsAttaque() {

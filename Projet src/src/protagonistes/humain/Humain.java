@@ -9,7 +9,7 @@ public class Humain extends EtreVivant {
     protected Arme maPossession;
 
     public Humain(String nom) {
-        super(nom, 100);
+        super(nom, 100,0);
     }
 
     public String parler(String s) {

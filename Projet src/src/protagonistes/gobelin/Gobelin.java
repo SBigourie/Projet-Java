@@ -5,7 +5,7 @@ import protagonistes.EtreVivant;
 
 public class Gobelin extends EtreVivant {
     public Gobelin(String nom) {
-        super(nom, 200);
+        super(nom, 200,0);
     }
 
     public String rejointBataille(Bataille bataille) {

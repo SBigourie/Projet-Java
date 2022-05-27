@@ -4,8 +4,8 @@ import affrontement.Bataille;
 import protagonistes.EtreVivant;
 
 public class Monstre extends EtreVivant {
-    public Monstre(String nom) {
-        super(nom, 200);
+    public Monstre(String nom, int vie, int degat) {
+        super(nom, vie,degat);
     }
 
     public String rejointBataille(Bataille bataille) {
