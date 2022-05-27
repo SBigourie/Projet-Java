@@ -86,9 +86,11 @@ public class champDeBataille {
                 else {
                     affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur2, b, 7, j);
                 }
-            }
-            numJoueur ++;
 
+            }
+
+
+            numJoueur ++;
             i++;
         }
     }
@@ -125,7 +127,7 @@ public class champDeBataille {
         }
 
 //        A qui le tour
-        if (plateau[xDest][yDest].getJoueur() != tour) {
+        if (plateau[xDest][yDest].getJoueur() != numJoueur) {
             throw new IllegalArgumentException("Ce n'est pas à toi de jouer");
         }
         if (plateau[xDest][yDest] != null) {
@@ -154,8 +156,4 @@ public class champDeBataille {
         return true;
     }
 
-//    public static void main(String[] args) {
-//        Echiquier echiquier = new Echiquier();
-//        echiquier.affichage();
-//    }
 }

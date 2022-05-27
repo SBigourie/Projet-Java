@@ -8,6 +8,7 @@ public class Gobelin extends EtreVivant {
         super(nom, 200,0);
     }
 
+
     public String rejointBataille(Bataille bataille) {
         super.rejointBataille(bataille);
         return bataille.ajouter(this);

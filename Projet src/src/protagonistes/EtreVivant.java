@@ -7,12 +7,18 @@ public class EtreVivant {
     protected String nom;
     protected int vie;
     protected int degat;
-    protected int joueur;
+    protected char joueur;
+
+    public char getJoueur() {
+        return joueur;
+    }
+
+    public void setJoueur(char joueur) {
+        this.joueur = joueur;
+    }
 
     protected Bataille bataille;
     protected Bataille eliminer;
-
-
 
     public int getDegat() {
         return degat;
@@ -22,24 +28,15 @@ public class EtreVivant {
         this.degat = degat;
     }
 
-    public int getJoueur() {
-        return joueur;
-    }
-
-    public int setJoueur(int joueur) {
-        this.joueur = joueur;
-        return joueur;
-    }
 
     public EtreVivant(String nom, int vie, int degat) {
-        this.joueur = joueur;
         this.nom = nom;
         this.vie = vie;
         this.degat = degat;
     }
 
     public String toString() {
-        String res = "" + this.nom + "/ PV:" + this.vie + "/ Attaque:" +this.degat;
+        String res = "" + this.nom + "/ PV:" + this.vie + "/ Attaque:" +this.degat + "    "+this.joueur;
         return res;
     }
 
