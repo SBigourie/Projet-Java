@@ -13,10 +13,6 @@ public class Humain extends EtreVivant {
         super(nom, 100,0);
     }
 
-    public String parler(String s) {
-        return nom + ": " + s + "\n";
-    }
-
     public String rejointBataille(Bataille bataille) {
         super.rejointBataille(bataille);
         return bataille.ajouter(this);

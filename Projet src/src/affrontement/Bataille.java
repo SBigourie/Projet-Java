@@ -64,7 +64,7 @@ public class Bataille implements Serializable{
 		String texte = "";
 		campsHumain.ajouterEtreVivant(humain);
 		if (campsHumain.nbCompagnon() > 1) {
-			texte = humain.parler("Bonjour, je m'appelle " + humain.getNom() + " et je viens me joindre au combat.");
+			//texte = humain.parler("Bonjour, je m'appelle " + humain.getNom() + " et je viens me joindre au combat.");
 		} else {
 			texte += (humain.getNom()
 					+ " est le premier à se joindre à la dernière bataille entre les Hommes et les dragons.\n");

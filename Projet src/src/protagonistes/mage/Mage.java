@@ -8,10 +8,6 @@ public class Mage extends EtreVivant {
     public Mage(String nom){
         super(nom,100,100);
     }
-    
-	public String parler(String s) {
-        return nom+": "+s+"\n";
-    }
 
     public String rejointBataille(Bataille bataille){
         super.rejointBataille(bataille);

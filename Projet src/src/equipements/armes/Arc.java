@@ -25,6 +25,7 @@ public class Arc extends Arme{
         }
     }
     
+    //ajout des caractéristiques de l'arme
     public void addAttaque() {
     	this.proprietaire.setDegat(this.degat);
     }

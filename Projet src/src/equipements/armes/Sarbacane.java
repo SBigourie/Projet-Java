@@ -16,16 +16,7 @@ public class Sarbacane extends Arme {
         return nombreFlechette;
     }
 
-    public String attaque (EtreVivant etreVivant){
-        if (nombreFlechette >0 ){
-            nombreFlechette = nombreFlechette -1;
-            return super.attaque(etreVivant);
-        }
-        else{
-            return "Malheureusement "+ proprietaire.getNom()+ " ne possédait plus de flèches. \n";
-        }
-    }
-    
+    //ajout des caractéristiques de l'arme au proprio
     public void addAttaque() {
       	this.proprietaire.setDegat(this.degat);
       }

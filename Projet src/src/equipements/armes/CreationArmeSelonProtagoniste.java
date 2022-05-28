@@ -5,12 +5,15 @@ import protagonistes.humain.Humain;
 
 public class CreationArmeSelonProtagoniste {
 	
-	
+	//creation de l'arme selon le choix passé en parametre et le propriétaire de type humain
 	public void creationArmeHumain(int choixArme, Humain proprietaire) {
 		switch(choixArme) {
 			case 1 : 
+				//creation de l'arme
 				Epee epee = new Epee();
+				//initialisation du propriétaire de l'arme
 				epee.proprietaire = proprietaire;
+				//ajout des caractéristiques de l'arme sur le protagoniste
 				epee.addAttaque();
 				break;
 			case 2 :
@@ -26,6 +29,7 @@ public class CreationArmeSelonProtagoniste {
 		}
 	}	
 	
+	//creation de l'arme selon le choix passé en parametre et le propriétaire de type gobelin
 	public void creationArmeGobelin(int choixArme, Gobelin proprietaire) {
 		switch(choixArme) {
 		case 1 : 

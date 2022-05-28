@@ -4,6 +4,8 @@ import protagonistes.TypeEtreVivant;
 
 public class affichageArme {
 	
+
+	//affichage des choix selon le type etrevivant passé en param
 	public void affichageSelonChoix(TypeEtreVivant typeEtre) {
 		switch (typeEtre){
 		case GOBELIN:

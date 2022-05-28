@@ -11,13 +11,7 @@ public class Epee extends Arme{
         super("Epee", 25);
     }
     
-    protected String attaque(EtreVivant etreVivant) {
-    	
-    	return proprietaire.getNom() + " attaque " + etreVivant.getNom() + " avec son " + getNature() + "\n"
-    +etreVivant.subirAttaque(degat);
-    
-    }
-    
+    //ajout des degats de l'arc au propriétaire
     public void addAttaque() {
       	this.proprietaire.setDegat(this.degat);
       }

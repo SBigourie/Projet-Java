@@ -5,16 +5,8 @@ import java.util.List;
 
 public class affichageEtreVivant {
 
+	//affichage des etrevivants possible
 	public void affichage() {
-		List<String> tabProtagonistes = new ArrayList<String>();
-		tabProtagonistes.add("1) Gobelin");
-		tabProtagonistes.add("2) Humain");
-		tabProtagonistes.add("3) Mage");
-		tabProtagonistes.add("4) Monstre");
-		
-		for(String protagoniste :tabProtagonistes) {
-			System.out.println(protagoniste);
-		}
-		
+		System.out.println("1) Gobelin \n2) Humain \n3) Mage \n4) Monstre");
 	}
 }

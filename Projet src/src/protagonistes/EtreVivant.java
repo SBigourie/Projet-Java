@@ -40,17 +40,19 @@ public class EtreVivant implements Serializable{
     }
 
 
+    //affichage des caractéristiques d'un etrevivant
     public String toString() {
         String res = "" + this.nom + "/ PV:" + this.vie + "/ Attaque:" +this.degat + "/ J:"+ this.joueur;
         return res;
     }
-
+    
+    //savoir si un protagoniste combat ou pas
     public boolean protagoniteCombat(int xOrig, int yOrig, int xDest, int yDest, EtreVivant[][] plateau) {
         boolean combat = false;
-//                if ()
         return combat;
     }
 
+    //savoir si le déplacement entrer par l'utilisateur est valide
     public boolean isValid(int xOrig, int yOrig, int xDest, int yDest) {
         boolean valid = false;
         int x = xDest - xOrig;
@@ -98,7 +100,8 @@ public class EtreVivant implements Serializable{
     public void setVie(int vie) {
         this.vie = vie;
     }
-
+    
+    //faie rejoindre la bataille à l'etre vivant
     public String rejointBataille(Bataille bataille) {
         this.bataille = bataille;
         return "";
@@ -108,6 +111,7 @@ public class EtreVivant implements Serializable{
         return null;
     }
     
+    //faire subir une attaque à entre deux protagonsite 
     public String subirAttaque(int forceAttaque){
         this.vie = (this.vie - forceAttaque);
         if (this.vie > 0)
@@ -120,6 +124,8 @@ public class EtreVivant implements Serializable{
             return (nom+" est mort \n") + this.mourir();
         }
     }
+    
+    //permet de gagner aléatoirement des point de vie à chaque foix qu'un etrevivant tue un autre etre
     public String regenerer(){
         Random random = new Random();
         int pvSupplementaire;

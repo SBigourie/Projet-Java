@@ -16,7 +16,7 @@ public class Arme {
     public String getNature() {
         return nature;
     }
-
+    
   protected String attaque(EtreVivant etreVivant) {
 	  return null;
     }

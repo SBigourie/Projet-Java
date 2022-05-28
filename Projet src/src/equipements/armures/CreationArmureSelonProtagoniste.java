@@ -8,11 +8,15 @@ import protagonistes.humain.Humain;
 
 public class CreationArmureSelonProtagoniste {
 	
+	//creation de l'armure selon le choix passé en param et le proprio de type humain
 	public void creationArmureHumain(int choixArmure, Humain humain) {
 		switch(choixArmure) {
 		case 1 : 
+			//creation de l'armure
 			Casque casque = new Casque();
+			//initialisation du proprio de l'armure
 			casque.proprietaireHumain = humain;
+			//ajout des caractéristiques de l'armure au proprio
 			casque.addVieHumain();
 			break;
 		case 2 :
@@ -33,11 +37,15 @@ public class CreationArmureSelonProtagoniste {
 		}
 	}
 	
+	//creation de l'armure selon le choix passé en param et le proprio de type humain
 	public void creationArmureGobelin(int choixArmure, Gobelin gobelin) {
 		switch(choixArmure) {
 		case 1 : 
+			//creation de l'armure
 			Casque casque = new Casque();
+			//initialisation du proprio de l'armure
 			casque.proprietaireGobelin = gobelin;
+			//ajout des caractéristiques de l'armure au proprio
 			casque.addVieGobelin();
 			break;
 		case 2 :

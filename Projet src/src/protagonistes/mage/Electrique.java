@@ -6,7 +6,4 @@ public class Electrique extends Mage{
         super("Mage Electrique");
     }
     
-    public String parler(String s) {
-        return "Le Mage Electrique: "+nom+" : "+s+"\n";
-    }
 }
