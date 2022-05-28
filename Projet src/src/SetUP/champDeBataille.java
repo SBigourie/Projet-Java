@@ -110,8 +110,8 @@ public class champDeBataille implements Serializable {
             }
             System.out.println("| x=" + i);
             System.out.println("-------------------------------------------------------------------------------------------");
-
         }
+
 
     }
 
@@ -151,16 +151,16 @@ public class champDeBataille implements Serializable {
             if (plateau[xDest][yDest].getJoueur() != plateau[xOrig][yOrig].getJoueur()) {
                 plateau[xDest][yDest].subirAttaque(plateau[xOrig][yOrig].getDegat());
                 plateau[xOrig][yOrig].subirAttaque(plateau[xDest][yDest].getDegat());
+                if (plateau[xOrig][yOrig].getVie() < 0) {
+                    plateau[xOrig][yOrig] = null;
+                }
                 //si le joueur tue son ennemie alors le protagoniste recupère entre 0 et 70 PV
                 if (plateau[xDest][yDest].getVie() < 0) {
                     plateau[xOrig][yOrig].regenerer();
                     plateau[xDest][yDest] = plateau[xOrig][yOrig];
                     plateau[xOrig][yOrig] = null;
                 }
-                if (plateau[xOrig][yOrig].getVie() < 0) {
-                    plateau[xOrig][yOrig] = null;
-                }
-            }
+             }
         }
         else {
             plateau[xDest][yDest] = plateau[xOrig][yOrig];
@@ -182,6 +182,32 @@ public class champDeBataille implements Serializable {
             tour = 1;
         }
         return true;
+    }
+    
+    //savoir si un joueur a gagner la partie
+    public void partieGagner() {
+    	int contJ1 = 0;
+    	int contJ2 = 0;
+    	for (int i = 0; i < 8; i++) {
+        	for (int j = 0; j < 3; j++) {
+        		if(plateau[i][j]==null) {
+        			
+        		}
+        		else if(plateau[i][j].getJoueur() == 1) {
+					contJ1++;
+				}else if(plateau[i][j].getJoueur() == 2) {
+					contJ2++;
+				}
+        	}
+		}
+    	
+    	if(contJ1 < 1) {
+    		System.out.println("Joueur 2 à WINNER");
+    		System.exit(0);
+    	}else if(contJ2 < 1) {
+    		System.out.println("Joueur 1 à WINNER");
+    		System.exit(0);
+    	}
     }
 
     public static void saveGame() {

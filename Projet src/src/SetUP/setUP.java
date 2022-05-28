@@ -4,8 +4,6 @@ import java.io.ObjectOutputStream;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import sauvegarde.Serialization;
-
 public class setUP {
 	
 
@@ -49,12 +47,9 @@ public class setUP {
                      System.out.println("Mauvais mouvement : " + e.getMessage());
                  }
             }
-
-        
-           
-
-                        
+            champDeBataille.partieGagner();
         }
+        
 
     }
 }
