@@ -1,6 +1,7 @@
 package protagonistes;
 
 import java.io.Serializable;
+import java.util.Random;
 
 import SetUP.champDeBataille;
 import affrontement.Bataille;
@@ -119,5 +120,11 @@ public class EtreVivant implements Serializable{
             return (nom+" est mort \n") + this.mourir();
         }
     }
-
+    public String regenerer(){
+        Random random = new Random();
+        int pvSupplementaire;
+        pvSupplementaire= random.nextInt(70);
+        this.vie = this.vie + pvSupplementaire;
+        return (nom+"gagne" +pvSupplementaire);
+    }
 }

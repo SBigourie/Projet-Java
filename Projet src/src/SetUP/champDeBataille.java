@@ -151,8 +151,9 @@ public class champDeBataille implements Serializable {
             if (plateau[xDest][yDest].getJoueur() != plateau[xOrig][yOrig].getJoueur()) {
                 plateau[xDest][yDest].subirAttaque(plateau[xOrig][yOrig].getDegat());
                 plateau[xOrig][yOrig].subirAttaque(plateau[xDest][yDest].getDegat());
+                //si le joueur tue son ennemie alors le protagoniste recupère entre 0 et 70 PV
                 if (plateau[xDest][yDest].getVie() < 0) {
-                    System.out.println("mort");
+                    plateau[xOrig][yOrig].regenerer();
                     plateau[xDest][yDest] = plateau[xOrig][yOrig];
                     plateau[xOrig][yOrig] = null;
                 }
