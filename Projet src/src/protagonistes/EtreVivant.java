@@ -110,12 +110,12 @@ public class EtreVivant implements Serializable{
         this.vie = (this.vie - forceAttaque);
         if (this.vie > 0)
         {
+
             return (nom+" subit une violente attaque, mais il parvient ? se relever \n");
         }
         else
         {
-            return (nom+" subit une violente attaque, trop violente pour survivre \n") + this.mourir();
-
+            return (nom+" est mort \n") + this.mourir();
         }
     }
 

@@ -21,6 +21,7 @@ public class setUP {
         while (xOrig >= 0) {
 
             champDeBataille.affichage();
+
             System.out.println("Joueur "+ champDeBataille.numJoueur + "\nChoisir votre action (q pour quitter, s pour sauvegarder, c pour charger une partie sauvegarder et d pour déplacement) : ");
             choix = scanner.next();
             if(choix.equals("q")) {
@@ -31,7 +32,8 @@ public class setUP {
             }else if(choix.equals("c")) {
                 champDeBataille.loadGame();
                 Thread.sleep(2000);
-            }else {
+            }
+            else {
             	 try {
                      System.out.println("Joueur "+ champDeBataille.numJoueur + " Saisir xOrig, yOrig, xDest, yDest:");
                      xOrig = scanner.nextInt();

@@ -14,7 +14,7 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Scanner;
 
-public class champDeBataille implements Serializable{
+public class champDeBataille implements Serializable {
 
     int nbPerso;
     int numJoueur = 1;
@@ -40,30 +40,28 @@ public class champDeBataille implements Serializable{
             nbPerso = scanner.nextInt();
 
             int k = 0;
-            int a=0;
+            int a = 0;
 
             for (int j = 0; j < nbPerso; j++) {
 
                 System.out.println("Choisir votre protagonsite :");
                 if (nbPerso > 3) {
                     if (k < 3) {
-                        affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur1, b, 0, j,numJoueur);
+                        affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur1, b, 0, j, numJoueur);
                         k++;
-                    }
-                    else if (k < 7) {
-                        affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur1, b, 1, a,numJoueur);
+                    } else if (k < 7) {
+                        affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur1, b, 1, a, numJoueur);
                         a++;
                         k++;
                     }
-                }
-                else {
-                    affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur1, b, 0, j,numJoueur);
+                } else {
+                    affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur1, b, 0, j, numJoueur);
                 }
             }
             i++;
         }
 
-        numJoueur ++;
+        numJoueur++;
 
         while (i < 2) {
 
@@ -75,23 +73,21 @@ public class champDeBataille implements Serializable{
             nbPerso = scanner.nextInt();
 
             int k = 0;
-            int a=0;
+            int a = 0;
 
             for (int j = 0; j < nbPerso; j++) {
                 System.out.println("Choisir votre protagonsite :");
                 if (nbPerso > 3) {
                     if (k < 3) {
-                        affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur2, b, 7, j,numJoueur);
+                        affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur2, b, 7, j, numJoueur);
                         k++;
-                    }
-                    else if (k < 7) {
-                        affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur2, b, 6, a,numJoueur);
+                    } else if (k < 7) {
+                        affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur2, b, 6, a, numJoueur);
                         a++;
                         k++;
                     }
-                }
-                else {
-                    affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur2, b, 7, j,numJoueur);
+                } else {
+                    affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur2, b, 7, j, numJoueur);
                 }
 
             }
@@ -101,7 +97,7 @@ public class champDeBataille implements Serializable{
 
 
     public void affichage() {
-        System.out.println("\n            y=0                            y=0                            y=0                ");
+        System.out.println("\n            y=0                            y=1                            y=2                ");
         System.out.println("\n-------------------------------------------------------------------------------------------");
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 3; j++) {
@@ -112,19 +108,19 @@ public class champDeBataille implements Serializable{
                     System.out.print("|                             ");
                 }
             }
-            System.out.println("| x="+i);
+            System.out.println("| x=" + i);
             System.out.println("-------------------------------------------------------------------------------------------");
 
         }
 
     }
 
-    public boolean moveTo(int xOrig, int yOrig, int xDest, int yDest) throws IllegalArgumentException{
+    public boolean moveTo(int xOrig, int yOrig, int xDest, int yDest) throws IllegalArgumentException {
         if (xDest == xOrig && yDest == yOrig) {
             throw new IllegalArgumentException("Source et destination sont les memes");
         }
-        if (xOrig < 0 || xOrig >= 8 || xDest < 0 || xDest >= 8 || yOrig < 0 || yOrig >= 3 || yDest < 0 || yDest >=3) {
-            throw new IllegalArgumentException("Source et/ou desitnation pas sur le plateau");
+        if (xOrig < 0 || xOrig >= 8 || xDest < 0 || xDest >= 8 || yOrig < 0 || yOrig >= 3 || yDest < 0 || yDest >= 3) {
+            throw new IllegalArgumentException("Source et/ou destination pas sur le plateau");
         }
 
         if (plateau[xOrig][yOrig] == null) {
@@ -139,13 +135,6 @@ public class champDeBataille implements Serializable{
             if (plateau[xDest][yDest].getJoueur() == plateau[xOrig][yOrig].getJoueur()) {
                 throw new IllegalArgumentException("Un protagoniste de ton camp est deja ici");
             }
-            else if(plateau[xDest][yDest].getJoueur() != plateau[xOrig][yOrig].getJoueur()){
-                System.out.println(plateau[xOrig][yOrig].getDegat());
-                System.out.println(plateau[xOrig][yOrig]);
-                System.out.println(plateau[xDest][yDest].subirAttaque(plateau[xOrig][yOrig].getDegat()));
-                plateau[xOrig][yOrig].subirAttaque(plateau[xDest][yDest].getDegat());
-
-            }
         }
         if (plateau[xOrig][yOrig].isValid(xOrig, yOrig, xDest, yDest)) {
             throw new IllegalArgumentException("Mouvement non valide");
@@ -153,52 +142,62 @@ public class champDeBataille implements Serializable{
         if (plateau[xOrig][yOrig].protagoniteCombat(xOrig, yOrig, xDest, yDest, plateau)) {
             throw new IllegalArgumentException("Protagoniste ici");
         }
-
-        plateau[xDest][yDest] = plateau[xOrig][yOrig];
-        plateau[xOrig][yOrig] = null;
-        
-        if (this.numJoueur == 1) {
-        	this.numJoueur++;
-        }else {
-        	this.numJoueur--;
-        }
-     
-
-
-      if (tour == 1 ) {
-            nbPerso = 2;
-            tour = 2;
+        if (plateau[xDest][yDest] != null) {
+            if (plateau[xDest][yDest].getJoueur() != plateau[xOrig][yOrig].getJoueur()) {
+                plateau[xDest][yDest].subirAttaque(plateau[xOrig][yOrig].getDegat());
+                plateau[xOrig][yOrig].subirAttaque(plateau[xDest][yDest].getDegat());
+                if (plateau[xDest][yDest].getVie() < 0) {
+                    System.out.println("mort");
+                    plateau[xDest][yDest] = plateau[xOrig][yOrig];
+                    plateau[xOrig][yOrig] = null;
+                }
+            }
         }
         else {
+            plateau[xDest][yDest] = plateau[xOrig][yOrig];
+            plateau[xOrig][yOrig] = null;
+        }
+
+        if (this.numJoueur == 1) {
+            this.numJoueur++;
+        } else {
+            this.numJoueur--;
+        }
+
+
+        if (tour == 1) {
+            nbPerso = 2;
+            tour = 2;
+        } else {
             nbPerso = 1;
             tour = 1;
         }
         return true;
     }
-    
+
     public static void saveGame() {
-		try {
-			FileOutputStream fos = new FileOutputStream("backup.sav");
-			ObjectOutputStream oos = new ObjectOutputStream(fos);
-			oos.writeObject(plateau);
-			oos.flush();
-			oos.close();
-			System.out.println("Jeu sauvegarder \n");
-		}catch (Exception e) {
-			System.out.println("Erreur : problème lors de la sauvegarde \n" + e);
-		}
-	}
-	
-	public static void loadGame() {
-		try {
-			FileInputStream fis = new FileInputStream("backup.sav");
-			ObjectInputStream ois = new ObjectInputStream(fis);
-			plateau = (EtreVivant[][]) ois.readObject();
-			ois.close();
-			System.out.println("Jeu charger \n");
-		}catch (Exception e) {
-			System.out.println("Erreur : problème lors du chargement du jeu \n" + e);
-		}
-	}
+        try {
+            FileOutputStream fos = new FileOutputStream("backup.sav");
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(plateau);
+            oos.flush();
+            oos.close();
+            System.out.println("Jeu sauvegarder \n");
+        } catch (Exception e) {
+            System.out.println("Erreur : problème lors de la sauvegarde \n" + e);
+        }
+    }
+
+    public static void loadGame() {
+        try {
+            FileInputStream fis = new FileInputStream("backup.sav");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            plateau = (EtreVivant[][]) ois.readObject();
+            ois.close();
+            System.out.println("Jeu charger \n");
+        } catch (Exception e) {
+            System.out.println("Erreur : problème lors du chargement du jeu \n" + e);
+        }
+    }
 
 }
