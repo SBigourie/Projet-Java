@@ -157,6 +157,9 @@ public class champDeBataille implements Serializable {
                     plateau[xDest][yDest] = plateau[xOrig][yOrig];
                     plateau[xOrig][yOrig] = null;
                 }
+                if (plateau[xOrig][yOrig].getVie() < 0) {
+                    plateau[xOrig][yOrig] = null;
+                }
             }
         }
         else {
