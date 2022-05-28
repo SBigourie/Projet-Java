@@ -142,6 +142,11 @@ public class champDeBataille implements Serializable {
         if (plateau[xOrig][yOrig].protagoniteCombat(xOrig, yOrig, xDest, yDest, plateau)) {
             throw new IllegalArgumentException("Protagoniste ici");
         }
+        /**
+         * si il y a un ennemie alors combat
+         * si le protagoniste est tu? l'attaquant prend sa position
+         * sinon il reste fig?e
+         */
         if (plateau[xDest][yDest] != null) {
             if (plateau[xDest][yDest].getJoueur() != plateau[xOrig][yOrig].getJoueur()) {
                 plateau[xDest][yDest].subirAttaque(plateau[xOrig][yOrig].getDegat());
