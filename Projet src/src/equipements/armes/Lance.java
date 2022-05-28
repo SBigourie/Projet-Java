@@ -7,7 +7,7 @@ public class Lance extends Arme{
     protected Gobelin proprietaire;
 
     public Lance() {
-        super("Lance", 25);
+        super("Lance", 15);
     }
     
   protected String attaque(EtreVivant etreVivant) {

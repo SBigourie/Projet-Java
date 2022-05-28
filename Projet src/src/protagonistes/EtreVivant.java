@@ -13,9 +13,16 @@ public class EtreVivant implements Serializable{
     protected int joueur;
     protected Bataille bataille;
     protected Bataille eliminer;
+    
 
 
-    public int getJoueur() {
+    public EtreVivant(String nom, int vie, int degat) {
+        this.nom = nom;
+        this.vie = vie;
+        this.degat = degat;
+    }
+
+	public int getJoueur() {
         return joueur;
     }
 
@@ -31,12 +38,6 @@ public class EtreVivant implements Serializable{
         this.degat = degat;
     }
 
-
-    public EtreVivant(String nom, int vie, int degat) {
-        this.nom = nom;
-        this.vie = vie;
-        this.degat = degat;
-    }
 
     public String toString() {
         String res = "" + this.nom + "/ PV:" + this.vie + "/ Attaque:" +this.degat + "/ J:"+ this.joueur;

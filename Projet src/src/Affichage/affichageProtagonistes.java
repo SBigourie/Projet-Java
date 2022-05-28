@@ -11,6 +11,7 @@ import protagonistes.mage.*;
 import protagonistes.monstre.*;
 import affrontement.Bataille;
 import equipements.armes.CreationArmeSelonProtagoniste;
+import equipements.spell.CreationSpellSelonProtagoniste;
 
 public class affichageProtagonistes implements Serializable{
 	private Bataille bataille ;
@@ -49,6 +50,8 @@ public class affichageProtagonistes implements Serializable{
 		affichageArme affichageSelonChoixArme = new affichageArme();
 		affichageEquipement affichageSelonChoixEquipement = new affichageEquipement();
 		CreationArmeSelonProtagoniste choixArme = new CreationArmeSelonProtagoniste();
+		CreationSpellSelonProtagoniste choixSpell = new CreationSpellSelonProtagoniste();
+
 
 		int protagonisteChoisie;
 		int armeChoisie;
@@ -73,6 +76,7 @@ public class affichageProtagonistes implements Serializable{
 					case 1 :
 						Rouge rouge = new Rouge("Rouge ");
 						rouge.setJoueur(numJoueur);
+						choixArme.creationArmeGobelin(armeChoisie, rouge);
 						b.ajouter(rouge);
 						rouge.rejointBataille(b);
 						rouge.getBataille().getCampsGobelin().ajouterEtreVivant(rouge);
@@ -81,6 +85,7 @@ public class affichageProtagonistes implements Serializable{
 					case 2:
 						Violet violet = new Violet("Violet ");
 						violet.setJoueur(numJoueur);
+						choixArme.creationArmeGobelin(armeChoisie, violet);
 						violet.rejointBataille(b);
 						violet.getBataille().getCampsGobelin().ajouterEtreVivant(violet);
 						violet.getBataille().getPlateau()[i][j] = violet;
@@ -88,6 +93,7 @@ public class affichageProtagonistes implements Serializable{
 					case 3:
 						Vert vert = new Vert("Vert ");
 						vert.setJoueur(numJoueur);
+						choixArme.creationArmeGobelin(armeChoisie, vert);
 						vert.rejointBataille(b);
 						vert.getBataille().getCampsGobelin().ajouterEtreVivant(vert);
 						vert.getBataille().getPlateau()[i][j] = vert;
@@ -142,22 +148,25 @@ public class affichageProtagonistes implements Serializable{
 				armeChoisie = scanner.nextInt();
 				switch (protagonisteChoisie){
 					case 1 :
-						Electrique electrique = new Electrique("Electrique ");
+						Electrique electrique = new Electrique();
 						electrique.setJoueur(numJoueur);
+						choixSpell.creationSpell(armeChoisie, electrique);
 						electrique.rejointBataille(b);
 						electrique.getBataille().getCampsMage().ajouterEtreVivant(electrique);
 						electrique.getBataille().getPlateau()[i][j] = electrique;
 						break;
 					case 2:
-						Feu feu = new Feu("Feu ");
+						Feu feu = new Feu();
 						feu.setJoueur(numJoueur);
+						choixSpell.creationSpell(armeChoisie, feu);
 						feu.rejointBataille(b);
 						feu.getBataille().getCampsMage().ajouterEtreVivant(feu);
 						feu.getBataille().getPlateau()[i][j] = feu;
 						break;
 					case 3:
-						Glace glace = new Glace("Glace ");
+						Glace glace = new Glace();
 						glace.setJoueur(numJoueur);
+						choixSpell.creationSpell(armeChoisie, glace);
 						glace.rejointBataille(b);
 						glace.getBataille().getCampsMage().ajouterEtreVivant(glace);
 						glace.getBataille().getPlateau()[i][j] = glace;
