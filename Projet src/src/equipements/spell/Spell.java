@@ -27,7 +27,6 @@ public class Spell {
 	public void useSpell() {
 		//ajout des points d'attaques 
 		this.proprietaire.setDegat(proprietaire.getDegat()+this.nbPointAttaque);
-		System.out.println("Attaque :"+ proprietaire.getDegat() + "et  attaque du spell"+ this.nbPointAttaque);
 		//ajout des points de vie 
 		this.proprietaire.setVie(proprietaire.getVie()+this.nbPointVie);
 	}
