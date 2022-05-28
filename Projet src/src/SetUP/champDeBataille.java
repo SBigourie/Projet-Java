@@ -80,11 +80,11 @@ public class champDeBataille implements Serializable{
                 System.out.println("Choisir votre protagonsite :");
                 if (nbPerso > 3) {
                     if (k < 3) {
-                        affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur2, b, 6, j,numJoueur);
+                        affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur2, b, 7, j,numJoueur);
                         k++;
                     }
                     else if (k < 7) {
-                        affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur2, b, 7, a,numJoueur);
+                        affichageProtagonistes.affichageSequenceDeProtagoniste(campsJoueur2, b, 6, a,numJoueur);
                         a++;
                         k++;
                     }
