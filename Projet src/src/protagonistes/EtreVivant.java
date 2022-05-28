@@ -10,6 +10,9 @@ public class EtreVivant implements Serializable{
     protected int vie;
     protected int degat;
     protected int joueur;
+    protected Bataille bataille;
+    protected Bataille eliminer;
+
 
     public int getJoueur() {
         return joueur;
@@ -18,9 +21,6 @@ public class EtreVivant implements Serializable{
     public void setJoueur(int joueur) {
         this.joueur = joueur;
     }
-
-    protected Bataille bataille;
-    protected Bataille eliminer;
 
     public int getDegat() {
         return degat;
@@ -98,9 +98,11 @@ public class EtreVivant implements Serializable{
         this.bataille = bataille;
         return "";
     }
+    
     public String mourir() {
         return null;
     }
+    
     public String subirAttaque(EtreVivant etreVivant, int forceAttaque){
         this.vie = (this.vie - forceAttaque);
         if (this.vie > 0)
@@ -113,4 +115,5 @@ public class EtreVivant implements Serializable{
 
         }
     }
+    
 }

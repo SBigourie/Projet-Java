@@ -9,7 +9,7 @@ import sauvegarde.Serialization;
 public class setUP {
 	
 
-    public static void main(String [] args) {    	
+    public static void main(String [] args) throws InterruptedException {    	
         champDeBataille champDeBataille = new champDeBataille();
         String choix;
 
@@ -27,9 +27,10 @@ public class setUP {
             	System.exit(0);
             }else if(choix.equals("s")){
             	champDeBataille.saveGame();
-            	System.out.println("yes");
+                Thread.sleep(2000);
             }else if(choix.equals("c")) {
                 champDeBataille.loadGame();
+                Thread.sleep(2000);
             }else {
             	 try {
                      System.out.println("Joueur "+ champDeBataille.numJoueur + " Saisir xOrig, yOrig, xDest, yDest:");

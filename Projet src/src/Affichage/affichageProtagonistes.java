@@ -10,6 +10,7 @@ import protagonistes.humain.*;
 import protagonistes.mage.*;
 import protagonistes.monstre.*;
 import affrontement.Bataille;
+import equipements.armes.CreationArmeSelonProtagoniste;
 
 public class affichageProtagonistes implements Serializable{
 	private Bataille bataille ;
@@ -47,6 +48,7 @@ public class affichageProtagonistes implements Serializable{
 //		stockProtagonisteChoisie stockageProtagoniste = new stockProtagonisteChoisie();
 		affichageArme affichageSelonChoixArme = new affichageArme();
 		affichageEquipement affichageSelonChoixEquipement = new affichageEquipement();
+		CreationArmeSelonProtagoniste choixArme = new CreationArmeSelonProtagoniste();
 
 		int protagonisteChoisie;
 		int armeChoisie;
@@ -82,7 +84,6 @@ public class affichageProtagonistes implements Serializable{
 						violet.rejointBataille(b);
 						violet.getBataille().getCampsGobelin().ajouterEtreVivant(violet);
 						violet.getBataille().getPlateau()[i][j] = violet;
-
 						break;
 					case 3:
 						Vert vert = new Vert("Vert ");
@@ -108,6 +109,7 @@ public class affichageProtagonistes implements Serializable{
 					case 2 :
 						Chevalier chevalier = new Chevalier("Chevalier ");
 						chevalier.setJoueur(numJoueur);
+						choixArme.creationArmeHumain(armeChoisie, chevalier);
 						chevalier.rejointBataille(b);
 						chevalier.getBataille().getCampsHumain().ajouterEtreVivant(chevalier);
 						chevalier.getBataille().getPlateau()[i][j] = chevalier;
@@ -115,6 +117,7 @@ public class affichageProtagonistes implements Serializable{
 					case 1:
 						Barbare barbare = new Barbare("Barbare ");
 						barbare.setJoueur(numJoueur);
+						choixArme.creationArmeHumain(armeChoisie, barbare);
 						barbare.rejointBataille(b);
 						barbare.getBataille().getCampsHumain().ajouterEtreVivant(barbare);
 						barbare.getBataille().getPlateau()[i][j] = barbare;
@@ -123,6 +126,7 @@ public class affichageProtagonistes implements Serializable{
 					case 3:
 						Roi roi = new Roi("Roi ");
 						roi.setJoueur(numJoueur);
+						choixArme.creationArmeHumain(armeChoisie, roi);
 						roi.rejointBataille(b);
 						roi.getBataille().getCampsHumain().ajouterEtreVivant(roi);
 						roi.getBataille().getPlateau()[i][j] = roi;

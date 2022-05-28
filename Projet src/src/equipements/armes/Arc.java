@@ -1,8 +1,10 @@
 package equipements.armes;
 import protagonistes.EtreVivant;
+import protagonistes.humain.Humain;
 
 public class Arc extends Arme{
     protected int nombreFleche;
+    protected Humain proprietaire;
 
     public Arc(int nombreFleche) {
         super("arc", 15);
@@ -22,5 +24,11 @@ public class Arc extends Arme{
             return "Malheureusement "+ proprietaire.getNom()+ " ne possédait plus de flèches. \n";
         }
     }
+    
+    public void addAttaque() {
+    	this.proprietaire.setDegat(this.degat);
+    }
+
+    
 
 }

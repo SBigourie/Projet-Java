@@ -1,11 +1,14 @@
 package equipements.armes;
 import protagonistes.EtreVivant;
+import protagonistes.gobelin.Gobelin;
 
 public class Sarbacane extends Arme {
     protected int nombreFlechette;
+    protected Gobelin proprietaire;
+
 
     public Sarbacane(int nombreFlechette) {
-        super("sarbacane",10);
+        super("Sarbacane",10);
         this.nombreFlechette = nombreFlechette;
     }
 
@@ -22,4 +25,8 @@ public class Sarbacane extends Arme {
             return "Malheureusement "+ proprietaire.getNom()+ " ne possédait plus de flèches. \n";
         }
     }
+    
+    public void addAttaque() {
+      	this.proprietaire.setDegat(this.degat);
+      }
 }

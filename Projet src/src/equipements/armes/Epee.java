@@ -1,8 +1,24 @@
 package equipements.armes;
 
-public class Epee extends Arme{
+import protagonistes.EtreVivant;
+import protagonistes.humain.Humain;
 
-    public Epee(String nature, int degat) {
-        super(nature, degat);
+public class Epee extends Arme{
+    protected Humain proprietaire;
+
+
+    public Epee() {
+        super("Epee", 25);
     }
+    
+    protected String attaque(EtreVivant etreVivant) {
+    	
+    	return proprietaire.getNom() + " attaque " + etreVivant.getNom() + " avec son " + getNature() + "\n"
+    +etreVivant.subirAttaque(etreVivant,degat);
+    
+    }
+    
+    public void addAttaque() {
+      	this.proprietaire.setDegat(this.degat);
+      }
 }
