@@ -13,7 +13,7 @@ public class Hache extends Arme{
   protected String attaque(EtreVivant etreVivant) {
     	
     	return proprietaire.getNom() + " attaque " + etreVivant.getNom() + " avec son " + getNature() + "\n"
-    +etreVivant.subirAttaque(etreVivant,degat);
+    +etreVivant.subirAttaque(degat);
     
     }
   

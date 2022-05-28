@@ -5,6 +5,7 @@ import Affichage.affichageEtreVivant;
 import Affichage.affichageProtagonistes;
 import affrontement.Bataille;
 import protagonistes.EtreVivant;
+import protagonistes.monstre.Geant;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -100,19 +101,19 @@ public class champDeBataille implements Serializable{
 
 
     public void affichage() {
-
-        System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("\n            y=0                            y=0                            y=0                ");
+        System.out.println("\n-------------------------------------------------------------------------------------------");
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 3; j++) {
                 if (plateau[i][j] != null) {
-                    System.out.print("| " + plateau[i][j].toString() + " "+"[x("+ i + ") y("+ j+")]");
+                    System.out.print("| " + plateau[i][j].toString());
                 } else {
 
-                    System.out.print("|                                "+ " "+"[x("+ i + ") y("+ j+")]");
+                    System.out.print("|                             ");
                 }
             }
-            System.out.println("|");
-            System.out.println("-------------------------------------------------------------------------------------------------------------------------------------");
+            System.out.println("| x="+i);
+            System.out.println("-------------------------------------------------------------------------------------------");
 
         }
 
@@ -138,11 +139,18 @@ public class champDeBataille implements Serializable{
             if (plateau[xDest][yDest].getJoueur() == plateau[xOrig][yOrig].getJoueur()) {
                 throw new IllegalArgumentException("Un protagoniste de ton camp est deja ici");
             }
+            else if(plateau[xDest][yDest].getJoueur() != plateau[xOrig][yOrig].getJoueur()){
+                System.out.println(plateau[xOrig][yOrig].getDegat());
+                System.out.println(plateau[xOrig][yOrig]);
+                System.out.println(plateau[xDest][yDest].subirAttaque(plateau[xOrig][yOrig].getDegat()));
+                plateau[xOrig][yOrig].subirAttaque(plateau[xDest][yDest].getDegat());
+
+            }
         }
         if (plateau[xOrig][yOrig].isValid(xOrig, yOrig, xDest, yDest)) {
             throw new IllegalArgumentException("Mouvement non valide");
         }
-        if (plateau[xOrig][yOrig].protagoniteChemin(xOrig, yOrig, xDest, yDest, plateau)) {
+        if (plateau[xOrig][yOrig].protagoniteCombat(xOrig, yOrig, xDest, yDest, plateau)) {
             throw new IllegalArgumentException("Protagoniste ici");
         }
 

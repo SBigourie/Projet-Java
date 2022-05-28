@@ -2,6 +2,7 @@ package protagonistes;
 
 import java.io.Serializable;
 
+import SetUP.champDeBataille;
 import affrontement.Bataille;
 
 public class EtreVivant implements Serializable{
@@ -42,8 +43,10 @@ public class EtreVivant implements Serializable{
         return res;
     }
 
-    public boolean protagoniteChemin(int xOrig, int yOrig, int xDest, int yDest, EtreVivant[][] plateau) {
-        return false;
+    public boolean protagoniteCombat(int xOrig, int yOrig, int xDest, int yDest, EtreVivant[][] plateau) {
+        boolean combat = false;
+//                if ()
+        return combat;
     }
 
     public boolean isValid(int xOrig, int yOrig, int xDest, int yDest) {
@@ -103,7 +106,7 @@ public class EtreVivant implements Serializable{
         return null;
     }
     
-    public String subirAttaque(EtreVivant etreVivant, int forceAttaque){
+    public String subirAttaque( int forceAttaque){
         this.vie = (this.vie - forceAttaque);
         if (this.vie > 0)
         {
@@ -111,9 +114,9 @@ public class EtreVivant implements Serializable{
         }
         else
         {
-            return (nom+" subit une violente attaque, trop violente pour survivre \n") + etreVivant.mourir();
+            return (nom+" subit une violente attaque, trop violente pour survivre \n") + this.mourir();
 
         }
     }
-    
+
 }
