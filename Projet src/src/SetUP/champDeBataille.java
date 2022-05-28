@@ -122,7 +122,7 @@ public class champDeBataille implements Serializable{
         if (xDest == xOrig && yDest == yOrig) {
             throw new IllegalArgumentException("Source et destination sont les memes");
         }
-        if (xOrig < 0 || xOrig > 3 || xDest < 0 || yDest > 8 || yOrig < 0 || yOrig > 8) {
+        if (xOrig < 0 || xOrig > 8 || xDest < 0 || yDest > 3) {
             throw new IllegalArgumentException("Source et/ou desitnation pas sur le plateau");
         }
 
