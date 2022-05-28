@@ -23,7 +23,7 @@ public class champDeBataille implements Serializable{
 
 
     public champDeBataille() {
-        Bataille b = new Bataille(this.plateau);
+        Bataille b = new Bataille(plateau);
         affichageEtreVivant affichageChoix = new affichageEtreVivant();
         Scanner scanner = new Scanner(System.in);
 
@@ -104,8 +104,8 @@ public class champDeBataille implements Serializable{
         System.out.println("-----------------------------------------------------------------------------------------------------");
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 3; j++) {
-                if (this.plateau[i][j] != null) {
-                    System.out.print("| " + this.plateau[i][j].toString() + " ");
+                if (plateau[i][j] != null) {
+                    System.out.print("| " + plateau[i][j].toString() + " ");
                 } else {
 
                     System.out.print("|                                ");
@@ -122,9 +122,10 @@ public class champDeBataille implements Serializable{
         if (xDest == xOrig && yDest == yOrig) {
             throw new IllegalArgumentException("Source et destination sont les memes");
         }
-        if (xOrig < 0 || xOrig > 3 || xDest < 0 || yDest > 8) {
+        if (xOrig < 0 || xOrig > 3 || xDest < 0 || yDest > 8 || yOrig < 0 || yOrig > 8) {
             throw new IllegalArgumentException("Source et/ou desitnation pas sur le plateau");
         }
+
         if (plateau[xOrig][yOrig] == null) {
             throw new IllegalArgumentException("Pas de protagonistes à cette emplacement");
         }
