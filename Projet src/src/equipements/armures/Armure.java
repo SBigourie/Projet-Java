@@ -1,11 +1,13 @@
 package equipements.armures;
 
 import protagonistes.EtreVivant;
+import protagonistes.gobelin.Gobelin;
 import protagonistes.humain.Humain;
 
 public class Armure {
 	
-	protected Humain proprietaire;
+	protected Humain proprietaireHumain;
+	protected Gobelin proprietaireGobelin;
 	protected String nature;
 	protected int nbVieAjouter;
     
@@ -14,13 +16,6 @@ public class Armure {
     	this.nbVieAjouter = nbVieAjouter;
     }
 
-	public Humain getProprietaire() {
-		return proprietaire;
-	}
-
-	public void setProprietaire(Humain proprietaire) {
-		this.proprietaire = proprietaire;
-	}
 
 	public String getNature() {
 		return nature;
@@ -37,19 +32,34 @@ public class Armure {
 	public void setNbVieAjouter(int nbVieAjouter) {
 		this.nbVieAjouter = nbVieAjouter;
 	}
+
+
+	public Humain getProprietaireHumain() {
+		return proprietaireHumain;
+	}
+
+
+	public void setProprietaireHumain(Humain proprietaireHumain) {
+		this.proprietaireHumain = proprietaireHumain;
+	}
+
+
+	public Gobelin getProprietaireGobelin() {
+		return proprietaireGobelin;
+	}
+
+
+	public void setProprietaireGobelin(Gobelin proprietaireGobelin) {
+		this.proprietaireGobelin = proprietaireGobelin;
+	}
 	
-	public String prendreCout(EtreVivant etrevivant) {
-		String str = this.getProprietaire() + " dispose d'un " + this.getNature() + 
-				" lui permettant d'encaisser les coûts venant de " + etrevivant.getNom();
 		
-		this.getProprietaire().setVie(this.getProprietaire().getVie() + this.getNbVieAjouter());
-		
-		if(this.getProprietaire().getVie() >= 0 ) {
-			return str + " mais cela n'a pas suffit pour le faire survivre.";
-		}else {
-			return str;
-		}
-		
+	public void addVieHumain() {
+		this.proprietaireHumain.setVie(proprietaireHumain.getVie() + this.nbVieAjouter);
+	}
+	
+	public void addVieGobelin() {
+		this.proprietaireGobelin.setVie(proprietaireGobelin.getVie() + this.nbVieAjouter);
 	}
     
 }

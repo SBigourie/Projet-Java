@@ -4,8 +4,8 @@ import protagonistes.EtreVivant;
 import protagonistes.humain.Humain;
 
 public class Epee extends Arme{
+	
     protected Humain proprietaire;
-
 
     public Epee() {
         super("Epee", 25);

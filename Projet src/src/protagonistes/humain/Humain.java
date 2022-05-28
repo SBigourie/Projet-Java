@@ -2,11 +2,12 @@ package protagonistes.humain;
 
 import affrontement.Bataille;
 import equipements.armes.Arme;
+import equipements.armures.Armure;
 import protagonistes.EtreVivant;
 
 public class Humain extends EtreVivant {
 
-    protected Arme maPossession;
+    protected Armure armure;
 
     public Humain(String nom) {
         super(nom, 100,0);

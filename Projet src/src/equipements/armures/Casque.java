@@ -3,6 +3,6 @@ package equipements.armures;
 public class Casque extends Armure{
 	
 	public Casque() {
-		super("Casque", 7);
+		super("Casque", 35);
 	}
 }

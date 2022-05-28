@@ -11,6 +11,7 @@ import protagonistes.mage.*;
 import protagonistes.monstre.*;
 import affrontement.Bataille;
 import equipements.armes.CreationArmeSelonProtagoniste;
+import equipements.armures.CreationArmureSelonProtagoniste;
 import equipements.spell.CreationSpellSelonProtagoniste;
 
 public class affichageProtagonistes implements Serializable{
@@ -51,6 +52,8 @@ public class affichageProtagonistes implements Serializable{
 		affichageEquipement affichageSelonChoixEquipement = new affichageEquipement();
 		CreationArmeSelonProtagoniste choixArme = new CreationArmeSelonProtagoniste();
 		CreationSpellSelonProtagoniste choixSpell = new CreationSpellSelonProtagoniste();
+		CreationArmureSelonProtagoniste choixArmure = new CreationArmureSelonProtagoniste();
+
 
 
 		int protagonisteChoisie;
@@ -77,6 +80,7 @@ public class affichageProtagonistes implements Serializable{
 						Rouge rouge = new Rouge("Rouge ");
 						rouge.setJoueur(numJoueur);
 						choixArme.creationArmeGobelin(armeChoisie, rouge);
+						choixArmure.creationArmureGobelin(equipementChoisie, rouge);
 						b.ajouter(rouge);
 						rouge.rejointBataille(b);
 						rouge.getBataille().getCampsGobelin().ajouterEtreVivant(rouge);
@@ -86,6 +90,7 @@ public class affichageProtagonistes implements Serializable{
 						Violet violet = new Violet("Violet ");
 						violet.setJoueur(numJoueur);
 						choixArme.creationArmeGobelin(armeChoisie, violet);
+						choixArmure.creationArmureGobelin(equipementChoisie, violet);
 						violet.rejointBataille(b);
 						violet.getBataille().getCampsGobelin().ajouterEtreVivant(violet);
 						violet.getBataille().getPlateau()[i][j] = violet;
@@ -94,6 +99,7 @@ public class affichageProtagonistes implements Serializable{
 						Vert vert = new Vert("Vert ");
 						vert.setJoueur(numJoueur);
 						choixArme.creationArmeGobelin(armeChoisie, vert);
+						choixArmure.creationArmureGobelin(equipementChoisie, vert);
 						vert.rejointBataille(b);
 						vert.getBataille().getCampsGobelin().ajouterEtreVivant(vert);
 						vert.getBataille().getPlateau()[i][j] = vert;
@@ -116,6 +122,7 @@ public class affichageProtagonistes implements Serializable{
 						Chevalier chevalier = new Chevalier("Chevalier ");
 						chevalier.setJoueur(numJoueur);
 						choixArme.creationArmeHumain(armeChoisie, chevalier);
+						choixArmure.creationArmureHumain(equipementChoisie, chevalier);
 						chevalier.rejointBataille(b);
 						chevalier.getBataille().getCampsHumain().ajouterEtreVivant(chevalier);
 						chevalier.getBataille().getPlateau()[i][j] = chevalier;
@@ -124,6 +131,7 @@ public class affichageProtagonistes implements Serializable{
 						Barbare barbare = new Barbare("Barbare ");
 						barbare.setJoueur(numJoueur);
 						choixArme.creationArmeHumain(armeChoisie, barbare);
+						choixArmure.creationArmureHumain(equipementChoisie, barbare);
 						barbare.rejointBataille(b);
 						barbare.getBataille().getCampsHumain().ajouterEtreVivant(barbare);
 						barbare.getBataille().getPlateau()[i][j] = barbare;
@@ -133,6 +141,7 @@ public class affichageProtagonistes implements Serializable{
 						Roi roi = new Roi("Roi ");
 						roi.setJoueur(numJoueur);
 						choixArme.creationArmeHumain(armeChoisie, roi);
+						choixArmure.creationArmureHumain(equipementChoisie, roi);
 						roi.rejointBataille(b);
 						roi.getBataille().getCampsHumain().ajouterEtreVivant(roi);
 						roi.getBataille().getPlateau()[i][j] = roi;

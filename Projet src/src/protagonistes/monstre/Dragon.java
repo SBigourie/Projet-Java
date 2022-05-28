@@ -5,9 +5,6 @@ import protagonistes.humain.Humain;
 public class Dragon extends Monstre {
 
     public Dragon(String nom) {
-        super(nom, 150, 200);
+        super(nom, 150, 100);
     }
-
-
-
 }

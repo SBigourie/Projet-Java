@@ -5,7 +5,7 @@ import protagonistes.EtreVivant;
 public class Bouclier extends Armure{
 
 	public Bouclier() {
-		super("Bouclier", 10);
+		super("Bouclier", 40);
 	}
 
 }

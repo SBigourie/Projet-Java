@@ -107,7 +107,7 @@ public class EtreVivant implements Serializable{
         return null;
     }
     
-    public String subirAttaque( int forceAttaque){
+    public String subirAttaque(int forceAttaque){
         this.vie = (this.vie - forceAttaque);
         if (this.vie > 0)
         {
