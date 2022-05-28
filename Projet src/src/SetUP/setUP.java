@@ -21,7 +21,7 @@ public class setUP {
         while (xOrig >= 0) {
 
             champDeBataille.affichage();
-            System.out.println("\nChoisir votre action (q pour quitter, s pour sauvegarder, c pour charger une partie sauvegarder et d pour déplacement) : ");
+            System.out.println("Joueur "+ champDeBataille.numJoueur + "\nChoisir votre action (q pour quitter, s pour sauvegarder, c pour charger une partie sauvegarder et d pour déplacement) : ");
             choix = scanner.next();
             if(choix.equals("q")) {
             	System.exit(0);

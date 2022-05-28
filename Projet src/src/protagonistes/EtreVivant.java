@@ -38,7 +38,7 @@ public class EtreVivant implements Serializable{
     }
 
     public String toString() {
-        String res = "" + this.nom + "/ PV:" + this.vie + "/ Attaque:" +this.degat + "    "+this.joueur;
+        String res = "" + this.nom + "/ PV:" + this.vie + "/ Attaque:" +this.degat + "/ J:"+ this.joueur;
         return res;
     }
 

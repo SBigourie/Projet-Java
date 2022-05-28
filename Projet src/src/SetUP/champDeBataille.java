@@ -17,7 +17,7 @@ public class champDeBataille implements Serializable{
 
     int nbPerso;
     int numJoueur = 1;
-    private static EtreVivant[][] plateau = new EtreVivant[10][10];
+    private static EtreVivant[][] plateau = new EtreVivant[8][3];
 
     private char tour = '1';
 
@@ -105,10 +105,10 @@ public class champDeBataille implements Serializable{
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 3; j++) {
                 if (plateau[i][j] != null) {
-                    System.out.print("| " + plateau[i][j].toString() + " ");
+                    System.out.print("| " + plateau[i][j].toString() + " "+"[x("+ i + ") y("+ j+")]");
                 } else {
 
-                    System.out.print("|                                ");
+                    System.out.print("|                                "+ " "+"[x("+ i + ") y("+ j+")]");
                 }
             }
             System.out.println("|");
@@ -122,7 +122,7 @@ public class champDeBataille implements Serializable{
         if (xDest == xOrig && yDest == yOrig) {
             throw new IllegalArgumentException("Source et destination sont les memes");
         }
-        if (xOrig < 0 || xOrig > 8 || xDest < 0 || yDest > 3) {
+        if (xOrig < 0 || xOrig >= 8 || xDest < 0 || xDest >= 8 || yOrig < 0 || yOrig >= 3 || yDest < 0 || yDest >=3) {
             throw new IllegalArgumentException("Source et/ou desitnation pas sur le plateau");
         }
 
